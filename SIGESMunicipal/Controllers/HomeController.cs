@@ -18,8 +18,9 @@ namespace SIGESMunicipal.Controllers
 
         public IActionResult Index()
         {
+            UsuarioNE obj = new UsuarioNE();
+            return View(obj.Listarusuarios());
 
-            return View();
         }
 
         public IActionResult Privacy()
@@ -27,10 +28,7 @@ namespace SIGESMunicipal.Controllers
             return View();
         }
 
-        public List<UsuarioEntity> ListarUser() {
-            UsuarioNE obj = new UsuarioNE();
-            return obj.Listarusuarios();  
-        } 
+       
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
