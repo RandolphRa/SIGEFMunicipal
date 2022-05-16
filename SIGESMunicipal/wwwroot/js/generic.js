@@ -414,7 +414,8 @@ async function fetchGet(url, tiporespuesta, callback, retorno = false) {
         else
             return res;
     } catch (e) {
-        alert("Ocurrion un error");
+        /*alert("Ocurrio un error");*/
+        Error("Ocurrio un Error","No se cargaron los datos")
         console.log(e)
         //document.getElementById("divLoading").style.display = "none";
     }
@@ -461,7 +462,8 @@ async function fetchPost(url, tiporespuesta, frm, callback) {
 
     } catch (e) {
         console.log(e)
-        alert("Ocurrion un error");
+       /* alert("Ocurrion un error");*/
+        Error("Ocurrio un Error", "No se cargaron los datos")
        // document.getElementById("divLoading").style.display = "none";
     }
 }
