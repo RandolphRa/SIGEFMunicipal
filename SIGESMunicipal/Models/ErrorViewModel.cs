@@ -1,4 +1,6 @@
-namespace SIGESMunicipal.Models
+namespace 
+    
+    Municipal.Models
 {
     public class ErrorViewModel
     {

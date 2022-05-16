@@ -9,33 +9,31 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+<div class="row">
+<div class="col-lg-6" id="pruebaContenedor">
+    
+<div class="input-group mb-3 col-lg-6 mt-5" id="divBusquedaForm" >
+  <input type="text" class="form-control" id="txtnombrebusqueda"
+  placeholder="Ingrese tipo medicamento" onkeyup="filtrarTipoMedicamento()"  />
+ 
+</div>
+    <div id="LaTabla">
+
+    </div>
+</div>
+<div class="col-lg-6" id="pruebaContenedor2">
+  
+<div class="input-group mb-3 col-lg-6 mt-5" id="divBusquedaForm" >
+  <input type="text" class="form-control" id="txtnombrebusqueda"
+  placeholder="Ingrese tipo medicamento" onkeyup="filtrarTipoMedicamento()"  />
+ 
+</div>
+    <div id="LaTabla2">
+
+    </div>
+</div>
+</div>
+<script src="~/js/sweetalert.js" asp-append-version="true"></script>
+<script src="~/js/generic.js" asp-append-version="true"></script>
+<script src="~/js/Home.js" asp-append-version="true"></script>

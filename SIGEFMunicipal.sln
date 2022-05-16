@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIGESMunicipal", "SIGESMunicipal\SIGESMunicipal.csproj", "{D01327C9-B551-407E-A628-286DB65448F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SIGEFMunicipal", "SIGESMunicipal\SIGEFMunicipal.csproj", "{D01327C9-B551-407E-A628-286DB65448F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaEntidad", "CapaEntidad\CapaEntidad.csproj", "{177EE787-8131-4650-9B2F-D5A5268DAA8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapaEntidad", "CapaEntidad\CapaEntidad.csproj", "{177EE787-8131-4650-9B2F-D5A5268DAA8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "CapaDatos\CapaDatos.csproj", "{97BEE4B2-7C9B-4DEA-BC2E-25006ECF7C0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapaDatos", "CapaDatos\CapaDatos.csproj", "{97BEE4B2-7C9B-4DEA-BC2E-25006ECF7C0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocios", "CapaNegocios\CapaNegocios.csproj", "{957A5BF4-DC1E-4F87-B6D4-FDD7831FA6D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapaNegocios", "CapaNegocios\CapaNegocios.csproj", "{957A5BF4-DC1E-4F87-B6D4-FDD7831FA6D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

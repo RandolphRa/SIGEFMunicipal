@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace SIGESMunicipal.Controllers
+namespace 
+    Municipal.Controllers
 {
     public class RRHHController : Controller
     {

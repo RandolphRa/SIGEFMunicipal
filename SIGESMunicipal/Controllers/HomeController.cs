@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SIGESMunicipal.Models;
+using 
+    Municipal.Models;
 using System.Diagnostics;
 using CapaNegocios;
 using CapaEntidad;
 
 
-namespace SIGESMunicipal.Controllers
+namespace SIGEFMunicipal.Controllers
 {
     public class HomeController : Controller
     {
@@ -19,7 +20,14 @@ namespace SIGESMunicipal.Controllers
         public IActionResult Index()
         {
             UsuarioNE obj = new UsuarioNE();
-            return View(obj.Listarusuarios());
+            return View();
+
+        }
+
+        public List<UsuarioEntity> ListarUsuario()
+        {
+            UsuarioNE obj = new UsuarioNE();
+            return obj.Listarusuarios();
 
         }
 

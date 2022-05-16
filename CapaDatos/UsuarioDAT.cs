@@ -10,23 +10,55 @@ using Microsoft.Extensions.Configuration;
 
 namespace CapaDatos
 {
-    public class UsuarioDAT
+    public class UsuarioDAT:CadenaDAL
     {
-        public string cadena()
-        {
-            IConfigurationBuilder builder = new ConfigurationBuilder();
-            builder.AddJsonFile(Path.Combine(Directory.GetCurrentDirectory(), "appsettings.json"));
-            var root = builder.Build();
-            var cn = root.GetConnectionString("cn");
-            return cn;
-        }
-
+       
 
         public List<UsuarioEntity> ListarUsuarios() { 
             List<UsuarioEntity> listaUsuarios = new List<UsuarioEntity>(); 
             listaUsuarios.Add(new UsuarioEntity { 
                 ID = 1,
                 Name ="Randolph"
+            });
+            listaUsuarios.Add(new UsuarioEntity
+            {
+                ID = 2,
+                Name ="Randolph2"
+            });
+            listaUsuarios.Add(new UsuarioEntity
+            {
+                ID = 2,
+                Name ="Randolph2"
+            });
+            listaUsuarios.Add(new UsuarioEntity
+            {
+                ID = 2,
+                Name ="Randolph2"
+            });
+            listaUsuarios.Add(new UsuarioEntity
+            {
+                ID = 2,
+                Name ="Randolph2"
+            });
+            listaUsuarios.Add(new UsuarioEntity
+            {
+                ID = 2,
+                Name ="Randolph2"
+            });
+            listaUsuarios.Add(new UsuarioEntity
+            {
+                ID = 2,
+                Name ="Randolph2"
+            });
+            listaUsuarios.Add(new UsuarioEntity
+            {
+                ID = 2,
+                Name ="Randolph2"
+            });
+            listaUsuarios.Add(new UsuarioEntity
+            {
+                ID = 2,
+                Name ="Randolph2"
             });
             listaUsuarios.Add(new UsuarioEntity
             {
@@ -42,7 +74,7 @@ namespace CapaDatos
         {
             List<UsuarioEntity> listaUsuarios = null;
 
-            using (SqlConnection cn = new SqlConnection(cadena()))
+            using (SqlConnection cn = new SqlConnection(cadena))
             {
                 try
                 {
