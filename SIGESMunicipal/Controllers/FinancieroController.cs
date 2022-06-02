@@ -19,5 +19,10 @@ namespace
         {
             return View();
         }
+
+        public IActionResult Clasificadores()
+        {
+            return View();
+        }
     }
 }

@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - 
         Municipal</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+   <!-- CSS only -->
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SIGEFMunicipal.styles.css" asp-append-version="true" />
 </head>
 <body class="text-white" style="font-weight: bold;">
+
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
            
@@ -20,8 +22,9 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    
+                   
                 </div>
+
             </div>
         </nav>
     </header>
@@ -34,7 +37,7 @@
             <div class="col-12">
                 <div class="row mb-2" style="text-align: right;padding: 0 25%;";>
                     <div class="col-3" onclick="location.href='@Url.Action("Index", "Home")'">
-                    <button class="text-white font-weight-bold buttons-modules btn bg-azul ">Presupuesto</button>
+                    <button class="text-white font-weight-bold buttons-modules btn bg-azul ">Financiero</button>
                     </div>
                      <div class="col-3">
                            <button class="text-white font-weight-bold buttons-modules btn bg-azul  ">Compras</button>
@@ -43,15 +46,16 @@
                            <button class="text-white font-weight-bold buttons-modules btn bg-azul  ">RRHH</button>
                     </div>
                      <div class="col-3">
-                           <button class="text-white font-weight-bold buttons-modules btn bg-azul  ">Financiero</button>
+                           <button class="text-white font-weight-bold buttons-modules btn bg-azul  ">Otros</button>
                     </div>
                  
        
                 </div>
         
             </div>
-        
-            <div class="col-12 p-4 border" style="height:75vh">
+         
+ 
+            <div class="col-12 p-4 border" style="height:100vh">
                 
                      @RenderBody()
                
@@ -66,6 +70,9 @@
             &copy; 2022 - SIGEFMunicipal - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>*@
+      <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
 <script src="~/js/jquery.js"></script>
 <script src="~/js/datatable.js"></script>
 <script src="~/js/sweetalert.js"></script>
