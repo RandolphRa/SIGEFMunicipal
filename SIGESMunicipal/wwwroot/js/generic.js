@@ -395,7 +395,7 @@ function setURL(url) {
 }
 
 async function fetchGet(url, tiporespuesta, callback, retorno = false) {
-    //document.getElementById("divLoading").style.display = "block";
+    document.getElementById("divLoading").style.display = "block";
     try {
         var raiz = document.getElementById("hdfOculto").value;
         //http://localhost........
@@ -408,7 +408,7 @@ async function fetchGet(url, tiporespuesta, callback, retorno = false) {
             res = await res.text();
         //JSON (Object)
 
-        //document.getElementById("divLoading").style.display = "none";
+        document.getElementById("divLoading").style.display = "none";
         if (retorno == false || retorno == null)
             callback(res)
         else
@@ -417,7 +417,7 @@ async function fetchGet(url, tiporespuesta, callback, retorno = false) {
         /*alert("Ocurrio un error");*/
         Error("Ocurrio un Error","No se cargaron los datos")
         console.log(e)
-        //document.getElementById("divLoading").style.display = "none";
+        document.getElementById("divLoading").style.display = "none";
     }
 }
 //[{"iidlaboratorio":1,"nombre":"SynLab","direccion":null,"personacontacto":null}
@@ -445,7 +445,7 @@ function llenarCombo(data, idcontrol, propiedadId, propiedadNombre, textoprimera
 async function fetchPost(url, tiporespuesta, frm, callback) {
     try {
         var raiz = document.getElementById("hdfOculto").value;
-        //document.getElementById("divLoading").style.display = "block";
+        document.getElementById("divLoading").style.display = "block";
         //http://localhost........
         var urlCompleta = window.location.protocol + "//" + window.location.host + "/" + raiz + url
         var res = await fetch(urlCompleta, {
@@ -458,13 +458,13 @@ async function fetchPost(url, tiporespuesta, frm, callback) {
             res = await res.text();
         //JSON (Object)
         callback(res)
-       // document.getElementById("divLoading").style.display = "none";
+       document.getElementById("divLoading").style.display = "none";
 
     } catch (e) {
         console.log(e)
        /* alert("Ocurrion un error");*/
         Error("Ocurrio un Error", "No se cargaron los datos")
-       // document.getElementById("divLoading").style.display = "none";
+        document.getElementById("divLoading").style.display = "none";
     }
 }
 
@@ -627,7 +627,7 @@ function pintar(objConfiguracion, objBusqueda, objFormulario) {
             var objeto;
             for (var j = 0; j < objBusquedaCombos.length; j++) {
                 objeto = objBusquedaCombos[j]
-                llenarCombo(objeto.data, objeto.id, objeto.valuemostrar, objeto.propiedadmostrar, "-------Todos--------", "0")
+                llenarCombo(objeto.data, objeto.id, objeto.valuemostrar, objeto.propiedadmostrar, "-------Seleccionar--------", "0")
             }
             if (objFormulario != null)
                 validarKeyPress(objFormulario.idformulario)
@@ -643,7 +643,7 @@ function pintar(objConfiguracion, objBusqueda, objFormulario) {
         var objeto;
         for (var j = 0; j < objBusquedaCombos.length; j++) {
             objeto = objBusquedaCombos[j]
-            llenarCombo(objeto.data, objeto.id, objeto.valuemostrar, objeto.propiedadmostrar, "-------Todos--------", "0")
+            llenarCombo(objeto.data, objeto.id, objeto.valuemostrar, objeto.propiedadmostrar, "-------Seleccionar--------", "0")
         }
     }
 
@@ -942,7 +942,8 @@ function generarTabla(res, objConfiguracionEspecifico) {
     var propiedadIdEspecifico = (objConfiguracionEspecifico == undefined)
         ? objConfiguracionGlobal.propiedadId :
         (objConfiguracionEspecifico.propiedadId == undefined ? "" : objConfiguracionEspecifico.propiedadId);
-    contenido += "<table id='" + idtablaEspecifico + "' class='table'>";
+   /* contenido += "<div class='table-wrapper-scroll-y my-custom-scrollbar'>"*/
+    contenido += "<table id='" + idtablaEspecifico + "' class='table' ";
     contenido += "<thead>";
     contenido += "<tr>";
     if (objConfiguracionEspecifico != undefined && objConfiguracionEspecifico.check == true) {
@@ -1023,6 +1024,7 @@ function generarTabla(res, objConfiguracionEspecifico) {
     }
     contenido += "</tbody>"
     contenido += "</table>";
+   /* contenido += "</div>"*/
     return contenido;
 }
 

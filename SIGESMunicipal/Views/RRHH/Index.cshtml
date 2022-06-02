@@ -5,3 +5,39 @@
 
 <h1>Index</h1>
 
+@model IEnumerable<CapaEntidad.UsuarioEntity>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div id="divLoading">klk</div>
+<div class="row">
+<div class="col-lg-12" id="pruebaContenedor">
+    
+@*<div class="input-group mb-3 col-lg-6 mt-5" id="divBusquedaForm" >
+  <input type="text" class="form-control" id="txtnombrebusqueda"
+  placeholder="Ingrese tipo medicamento" onkeyup="filtrarTipoMedicamento()"  />
+ 
+</div>*@
+    <div id="LaTabla">
+
+    </div>
+</div>
+<div class="col-lg-12" id="pruebaContenedor2">
+  
+@*<div class="input-group mb-3 col-lg-6 mt-5" id="divBusquedaForm" >
+  <input type="text" class="form-control" id="txtnombrebusqueda"
+  placeholder="Ingrese tipo medicamento" onkeyup="filtrarTipoMedicamento()"  />
+ 
+</div>*@
+    <div id="LaTabla2" >
+
+    </div>
+</div>
+</div>
+
+
+<script src="~/js/generic.js" asp-append-version="true"></script>
+<script src="~/js/Home.js" asp-append-version="true"></script>

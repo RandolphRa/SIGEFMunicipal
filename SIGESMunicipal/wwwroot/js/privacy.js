@@ -35,7 +35,8 @@ function listarTipoMedicamento() {
         eliminar: true,
         propiedadId: "id",
         divPintado: "pruebaContenedor",
-        divContenedorTabla:"LaTabla",
+        divContenedorTabla: "LaTabla",
+        idtabla:"tablaklk",
         urleliminar: "TipoMedicamento/eliminarTipoMedicamento",
         nombreparametroeliminar: "id",
         titlePopup: "Usuarios",
@@ -44,7 +45,7 @@ function listarTipoMedicamento() {
 
     bjFormularioMedicamento = {
         type: "popup",
-        legend: "Registro  Medicamento",
+        legend: "Registro  De algo",
         idformulario: "frmRegistroMedicamento",
         urlguardar: "Medicamento/guardarMedicamento",
         urlrecuperar: "Medicamento/recuperarMedicamento",
@@ -58,33 +59,8 @@ function listarTipoMedicamento() {
                     class: "col-md-6",
                     name: "iidmedicamento"
                 },
-                {
-                    label: "Codigo Medicamento",
-
-                    class: "col-md-6",
-                    name: "codigoMedicamento"
-                }
             ],
-            [
-                {
-                    label: "Nombre Medicamento",
-
-                    class: "col-md-6",
-                    name: "nombremedicamento"
-                },
-                {
-                    //div
-                    class: "col-md-6",
-                    label: "Laboratorio",
-                    name: "iidlaboratorio",
-                    type: "combobox",
-                    data: "hola",
-                    id: "cboLaboratorioFormulario",
-                    propiedadmostrar: "nombre",
-                    valuemostrar: "iidlaboratorio"
-
-                }
-            ],
+            
             [
                 {
                     //div
@@ -118,33 +94,11 @@ function listarTipoMedicamento() {
     }
 
     objBusqueda = {
-        legend: "Busqueda de Laboratorio",
+        legend: "Filtro",
         idformulario: "frmBusqueda",
         url: "Laboratorio/filtrarLaboratorio",
         formulario: [
-            [
-                {
-                    //div
-                    class: "col-md-6",
-                    label: "Nombre Laboratorio",
-                    name: "nombre"
 
-
-
-
-                },
-                {
-                    //div
-                    type: "textarea",
-                    class: "col-md-6",
-                    label: "Direccion Laboratorio",
-                    name: "direccion"
-
-
-
-
-                }
-            ],
             [
                 {
                     //div
