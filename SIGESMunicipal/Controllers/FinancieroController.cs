@@ -57,20 +57,20 @@ namespace
             return obj.ListarFuentes();
 
         }
-<<<<<<< HEAD
+
 
         public List<FinancieroCatalogoFuncionesCLS> ListarCatalogoFunciones()
         {
             //Consume la capa negocios
             FinancieroBL obj = new FinancieroBL();
             return obj.ListarCatalogoFunciones();
+        }
 
-=======
         public List<FinancieroProgramaticaCLS> ListarProgramatico()
         {
             FinancieroBL obj = new FinancieroBL();
             return obj.ListarProgramatico();
->>>>>>> c4bdf1e5d53d1984e1fb6bb09a6caad996503262
+
         }
     }
 }

@@ -20,7 +20,8 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    font-weight: bold !important;
 }
 .my-custom-scrollbar {
     position: relative;
@@ -39,8 +40,9 @@ body {
 }
 
 .module-item {
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
+    padding: 0px;
 }
 
 .bg-azul {

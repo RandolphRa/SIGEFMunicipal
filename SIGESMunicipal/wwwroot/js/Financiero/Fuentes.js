@@ -112,7 +112,7 @@ function listarTipoMedicamento() {
     }
 
     objBusqueda = {
-        legend: "Filtro",
+        legend: "",
         idformulario: "frmBusqueda",
         url: "Laboratorio/filtrarLaboratorio",
         formulario: [
