@@ -122,6 +122,7 @@ namespace CapaDatos
         
         }
 
+
         public List<FinancieroCatalogoFuncionesCLS> ListarFinancieroCatalogo()
         {
             List<FinancieroCatalogoFuncionesCLS> listaUsuarios = new List<FinancieroCatalogoFuncionesCLS>();
@@ -131,13 +132,85 @@ namespace CapaDatos
                 codigo = 1245,
                 finalidad = 1234,
                 funcion = 25,
-                subFuncion = 23123,
+                subfuncion = 23123,
                 denominacion = "OPERACION FALCON",
 
             });
-         
+            listaUsuarios.Add(new FinancieroCatalogoFuncionesCLS
+            {
+                ID = 1,
+                codigo = 1245,
+                finalidad = 1234,
+                funcion = 25,
+                subfuncion = 23123,
+                denominacion = "OPERACION FALCON",
+
+            });
+            listaUsuarios.Add(new FinancieroCatalogoFuncionesCLS
+            {
+                ID = 1,
+                codigo = 1245,
+                finalidad = 1234,
+                funcion = 25,
+                subfuncion = 23123,
+                denominacion = "OPERACION FALCON",
+
+            });
+
+
 
             return listaUsuarios;
+        }
+        public List<FinancieroFuentesFinanciamientoCLS> ListarFuentesFinanciamiento()
+        {
+            List<FinancieroFuentesFinanciamientoCLS> ListaFuentes = new List<FinancieroFuentesFinanciamientoCLS>();
+            ListaFuentes.Add(new FinancieroFuentesFinanciamientoCLS
+            {
+                ID = 1,
+                CODIGO = 1234,
+                DENOMINACION = "Descripcion algo",
+                ORIGEN = "",
+                FONDO = 12312,
+                FUENTE = "UNA FUENTE",
+                GRUPO = "UNA CLASIFICACION"
+              
+            });
+            ListaFuentes.Add(new FinancieroFuentesFinanciamientoCLS
+            {
+                ID = 1,
+                CODIGO = 1234,
+                DENOMINACION = "Descripcion algo",
+                ORIGEN = "",
+                FONDO = 12312,
+                FUENTE = "UNA FUENTE",
+                GRUPO = "UNA CLASIFICACION"
+
+            });
+            ListaFuentes.Add(new FinancieroFuentesFinanciamientoCLS
+            {
+                ID = 1,
+                CODIGO = 1234,
+                DENOMINACION = "Descripcion algo",
+                ORIGEN = "",
+                FONDO = 12312,
+                FUENTE = "UNA FUENTE",
+                GRUPO = "UNA CLASIFICACION"
+
+            });
+            ListaFuentes.Add(new FinancieroFuentesFinanciamientoCLS
+            {
+                ID = 1,
+                CODIGO = 1234,
+                DENOMINACION = "Descripcion algo",
+                ORIGEN = "",
+                FONDO = 12312,
+                FUENTE = "UNA FUENTE",
+                GRUPO = "UNA CLASIFICACION"
+
+            });
+
+            return ListaFuentes;
+
 
         }
 

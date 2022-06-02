@@ -16,7 +16,7 @@ namespace CapaEntidad
 
         public int funcion { get; set; }
 
-        public int subFuncion { get; set; }
+        public int subfuncion { get; set; }
 
         public string denominacion { get; set; }   
     }

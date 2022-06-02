@@ -27,11 +27,38 @@ namespace
             return View();
         }
 
+        public IActionResult FuentesFinanciamiento()
+        {
+            return View();
+        }
+
+        public IActionResult Catalogo()
+        {
+            return View();
+        }
+
+
         public List<FinancieroClasificadoresCLS> ListarClasificadores()
         {
             //Consume la capa negocios
             FinancieroBL obj = new FinancieroBL();
             return obj.ListarClasificadores();
+
+        }
+
+        public List<FinancieroFuentesFinanciamientoCLS> ListarFuentes()
+        {
+            //Consume la capa negocios
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarFuentes();
+
+        }
+
+        public List<FinancieroCatalogoFuncionesCLS> ListarCatalogoFunciones()
+        {
+            //Consume la capa negocios
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarCatalogoFunciones();
 
         }
     }

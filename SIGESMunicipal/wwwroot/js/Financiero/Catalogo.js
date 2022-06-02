@@ -25,24 +25,16 @@ function filtrarTipoMedicamento() {
     }
 }
 
-ID = 1,
-    CLASIFICADOR = 1234,
-    DESCRIPCION = "Descripcion algo",
-    CUENTA_CONTROL = 23123,
-    TIPO = "NORMAL",
-    CLASIFICACION = "UNA CLASIFICACION",
-    CTA_CONTABLE = 123123
-
 
 function listarTipoMedicamento() {
     objGlobalTipoMedicamento = {
 
         /*URL para listar data desde el controlador*/
-        url: "Financiero/ListarClasificadores",
+        url: "Financiero/ListarCatalogoFunciones",
         /*Cabeceras Tabla*/
-        cabeceras: ["id","Clasificador", "Descripcion", "Cuenta Control", "Tipo", "Clasificacion", "Cuenta Contable"],
+        cabeceras: ["id","CODIGO", "Finalidad", "Funcion", "Sub-Funcion", "Denominacion"],
         /*Propiedades del servicio*/
-        propiedades: ["id", "clasificador", "descripcion", "cuentA_CONTROL", "tipo", "clasificacion", "ctA_CONTABLE"],
+        propiedades: ["id", "codigo", "finalidad", "funcion", "subfuncion", "denominacion"],
         editar: false,
         eliminar: false,
         propiedadId: "id",
@@ -66,17 +58,14 @@ function listarTipoMedicamento() {
         formulario: [
             [
                 {
-                    label: "Clasificacion",
+                    label: "Codigo",
                     readonly: true,
-                    type: "radio",
+
                     //nuevas
-                    labels: ["Ingreso", "Gastos"],
-                    values: ["1", "0"],
-                    ids: ["rbHabilitado", "rbDeshabilitado"],
-                    checked: "rbHabilitado",
+
+
                     //
-                    name: "bhabilitado",
-                    class: "col-md-12",
+                    class: "col-md-3",
                     name: "iidmedicamento"
                 },
             ],
@@ -84,8 +73,8 @@ function listarTipoMedicamento() {
             [
                 {
                     //div
-                    class: "col-md-6",
-                    label: "Clasificador",
+                    class: "col-md-3",
+                    label: "Finalidad",
                     name: "iidtipomedicamento",
                     
                     data: "hola",
@@ -95,34 +84,27 @@ function listarTipoMedicamento() {
 
                 },
                 {
-                    label: "Descripcion",
+                    label: "Funcion",
 
-                    class: "col-md-6",
+                    class: "col-md-1",
                     name: "usomedicamento"
                 },
                 {
-                    label: "Tipo",
+                    label: "Sub-Funcion",
 
-                    class: "col-md-6",
+                    class: "col-md-2",
                     name: "usomedicamento",
-                    type: "combobox",
-                    data: "hola",
+                  
                     id: "cboLaboratorioFormulario",
-                    propiedadmostrar: "nombre",
-                    valuemostrar: "iidlaboratorio"
-                },
-                {
-                    label: "Resumen Desc",
 
-                    class: "col-md-6",
-                    name: "usomedicamento"
-                }
+                },
+                
             ],
             [
                 {
-                    label: "Cuenta Contable",
+                    label: "Denominacion",
 
-                    class: "col-md-12",
+                    class: "col-md-8",
                     name: "contenido"
                 }
             ]
@@ -139,39 +121,12 @@ function listarTipoMedicamento() {
             [
                 {
                     //div
-                    class: "col-md-4",
-                    label: "Descripcion",
-                    name: "Descripcion"
+                    class: "col-md-2",
+                    label: "Codigo",
+                    name: "Codigo"
 
                 },
-                {
-                    //div
-                    class: "col-md-4",
-                    label: "Clasificador",
-                    name: "Descripcion"
-
-                },
-                 {
-                    //div
-                    class: "col-md-4",
-                    label: "Cuenta control",
-                    name: "Descripcion"
-
-                },
-                  {
-                    //div
-                    class: "col-md-4",
-                    label: "Tipo",
-                    name: "Descripcion"
-
-                },
-                   {
-                    //div
-                    class: "col-md-4",
-                    label: "Cuenta control",
-                    name: "Descripcion"
-
-                }
+                
 
             ]
         ]

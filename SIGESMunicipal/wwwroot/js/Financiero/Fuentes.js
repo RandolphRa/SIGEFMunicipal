@@ -36,13 +36,13 @@ ID = 1,
 
 function listarTipoMedicamento() {
     objGlobalTipoMedicamento = {
-
+      
         /*URL para listar data desde el controlador*/
-        url: "Financiero/ListarClasificadores",
+        url: "Financiero/ListarFuentes",
         /*Cabeceras Tabla*/
-        cabeceras: ["id","Clasificador", "Descripcion", "Cuenta Control", "Tipo", "Clasificacion", "Cuenta Contable"],
+        cabeceras: ["id","Grupo", "Fuente", "Fondo", "Denominacion"],
         /*Propiedades del servicio*/
-        propiedades: ["id", "clasificador", "descripcion", "cuentA_CONTROL", "tipo", "clasificacion", "ctA_CONTABLE"],
+        propiedades: ["id", "grupo","fuente", "fondo", "denominacion"],
         editar: false,
         eliminar: false,
         propiedadId: "id",
@@ -66,17 +66,9 @@ function listarTipoMedicamento() {
         formulario: [
             [
                 {
-                    label: "Clasificacion",
+                    label: "Codigo",
                     readonly: true,
-                    type: "radio",
-                    //nuevas
-                    labels: ["Ingreso", "Gastos"],
-                    values: ["1", "0"],
-                    ids: ["rbHabilitado", "rbDeshabilitado"],
-                    checked: "rbHabilitado",
-                    //
-                    name: "bhabilitado",
-                    class: "col-md-12",
+                 
                     name: "iidmedicamento"
                 },
             ],
@@ -85,7 +77,7 @@ function listarTipoMedicamento() {
                 {
                     //div
                     class: "col-md-6",
-                    label: "Clasificador",
+                    label: "Fondo",
                     name: "iidtipomedicamento",
                     
                     data: "hola",
@@ -95,37 +87,26 @@ function listarTipoMedicamento() {
 
                 },
                 {
-                    label: "Descripcion",
+                    label: "Fuente",
 
                     class: "col-md-6",
                     name: "usomedicamento"
                 },
                 {
-                    label: "Tipo",
+                    label: "Origen",
 
                     class: "col-md-6",
                     name: "usomedicamento",
-                    type: "combobox",
-                    data: "hola",
-                    id: "cboLaboratorioFormulario",
-                    propiedadmostrar: "nombre",
-                    valuemostrar: "iidlaboratorio"
+                   
                 },
                 {
-                    label: "Resumen Desc",
+                    label: "Denominacion",
 
                     class: "col-md-6",
                     name: "usomedicamento"
                 }
             ],
-            [
-                {
-                    label: "Cuenta Contable",
-
-                    class: "col-md-12",
-                    name: "contenido"
-                }
-            ]
+        
 
         ]
     }
@@ -140,38 +121,11 @@ function listarTipoMedicamento() {
                 {
                     //div
                     class: "col-md-4",
-                    label: "Descripcion",
+                    label: "Codigo",
                     name: "Descripcion"
 
                 },
-                {
-                    //div
-                    class: "col-md-4",
-                    label: "Clasificador",
-                    name: "Descripcion"
-
-                },
-                 {
-                    //div
-                    class: "col-md-4",
-                    label: "Cuenta control",
-                    name: "Descripcion"
-
-                },
-                  {
-                    //div
-                    class: "col-md-4",
-                    label: "Tipo",
-                    name: "Descripcion"
-
-                },
-                   {
-                    //div
-                    class: "col-md-4",
-                    label: "Cuenta control",
-                    name: "Descripcion"
-
-                }
+           
 
             ]
         ]

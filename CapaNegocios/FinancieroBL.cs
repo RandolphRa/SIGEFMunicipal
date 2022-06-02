@@ -16,5 +16,19 @@ namespace CapaNegocios
             UsuarioDAT obj = new UsuarioDAT();
             return obj.ListarUsuarios();
         }
+
+        public List<FinancieroFuentesFinanciamientoCLS> ListarFuentes()
+        {
+
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarFuentesFinanciamiento();
+        }
+
+        public List<FinancieroCatalogoFuncionesCLS> ListarCatalogoFunciones()
+        {
+
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarFinancieroCatalogo();
+        }
     }
 }
