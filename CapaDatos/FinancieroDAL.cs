@@ -121,6 +121,24 @@ namespace CapaDatos
             return listaUsuarios;
         
         }
+        public List<FinancieroProgramaticoCLS> ListarClasificadores2()
+        {
+            List<FinancieroProgramaticoClS> listaUsuarios = new List<FinancieroProgramaticoClS>();
+            listaUsuarios.Add(new FinancieroProgramaticoClS
+            {
+                ID = 1,
+                CLASIFICADOR = 1234,
+                DESCRIPCION = "Descripcion algo",
+                CUENTA_CONTROL = 23123,
+                TIPO = "NORMAL",
+                CLASIFICACION = "UNA CLASIFICACION",
+                CTA_CONTABLE = 123123
+            });
+            
+
+            return listaUsuarios;
+
+        }
 
         //public List<UsuarioEntity> ListarUsuarios2()
         //{
