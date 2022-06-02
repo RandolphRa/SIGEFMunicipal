@@ -122,6 +122,25 @@ namespace CapaDatos
         
         }
 
+        public List<FinancieroCatalogoFuncionesCLS> ListarFinancieroCatalogo()
+        {
+            List<FinancieroCatalogoFuncionesCLS> listaUsuarios = new List<FinancieroCatalogoFuncionesCLS>();
+            listaUsuarios.Add(new FinancieroCatalogoFuncionesCLS
+            {
+                ID = 1,
+                codigo = 1245,
+                finalidad = 1234,
+                funcion = 25,
+                subFuncion = 23123,
+                denominacion = "OPERACION FALCON",
+
+            });
+         
+
+            return listaUsuarios;
+
+        }
+
         //public List<UsuarioEntity> ListarUsuarios2()
         //{
         //    List<UsuarioEntity> listaUsuarios = null;
