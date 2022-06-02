@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CapaEntidad;
-using Microsoft.Extensions.Configuration;
+﻿using CapaEntidad;
 
 namespace CapaDatos
 {
@@ -121,22 +113,84 @@ namespace CapaDatos
             return listaUsuarios;
         
         }
-        public List<FinancieroProgramaticoCLS> ListarClasificadores2()
+        public List<FinancieroProgramaticaCLS> ListarEtsProgramatico()
         {
-            List<FinancieroProgramaticoClS> listaUsuarios = new List<FinancieroProgramaticoClS>();
-            listaUsuarios.Add(new FinancieroProgramaticoClS
+            List<FinancieroProgramaticaCLS> listProgramatico = new List<FinancieroProgramaticaCLS>();
+            listProgramatico.Add(new FinancieroProgramaticaCLS
             {
-                ID = 1,
-                CLASIFICADOR = 1234,
-                DESCRIPCION = "Descripcion algo",
-                CUENTA_CONTROL = 23123,
-                TIPO = "NORMAL",
-                CLASIFICACION = "UNA CLASIFICACION",
-                CTA_CONTABLE = 123123
-            });
-            
+                id=5,
+                PNAP = 5,
+               Programa = 5,
+               Proyecto = 5,
+               Actividad = 5,
+               EstProgControl = "Hola",
+               Denominacion = "Hola",
+               UnidadResponsable = "Hola"
 
-            return listaUsuarios;
+            });
+            listProgramatico.Add(new FinancieroProgramaticaCLS
+            {
+                id = 5,
+                PNAP = 5,
+                Programa = 5,
+                Proyecto = 5,
+                Actividad = 5,
+                EstProgControl = "Hola",
+                Denominacion = "Hola",
+                UnidadResponsable = "Hola"
+
+            });
+            listProgramatico.Add(new FinancieroProgramaticaCLS
+            {
+                id = 5,
+                PNAP = 5,
+                Programa = 5,
+                Proyecto = 5,
+                Actividad = 5,
+                EstProgControl = "Hola",
+                Denominacion = "Hola",
+                UnidadResponsable = "Hola"
+
+            });
+            listProgramatico.Add(new FinancieroProgramaticaCLS
+            {
+                id = 5, 
+                PNAP = 5,
+                Programa = 5,
+                Proyecto = 5,
+                Actividad = 5,
+                EstProgControl = "Hola",
+                Denominacion = "Hola",
+                UnidadResponsable = "Hola"
+
+            });
+            listProgramatico.Add(new FinancieroProgramaticaCLS
+            {
+                id = 5,
+                PNAP = 5,
+                Programa = 5,
+                Proyecto = 5,
+                Actividad = 5,
+                EstProgControl = "Hola",
+                Denominacion = "Hola",
+                UnidadResponsable = "Hola"
+
+            });
+            listProgramatico.Add(new FinancieroProgramaticaCLS
+            {
+                id = 5, 
+                PNAP = 5,
+                Programa = 5,
+                Proyecto = 5,
+                Actividad = 5,
+                EstProgControl = "Hola",
+                Denominacion = "Hola",
+                UnidadResponsable = "Hola"
+
+            });
+
+
+            return listProgramatico;
 
         }
 

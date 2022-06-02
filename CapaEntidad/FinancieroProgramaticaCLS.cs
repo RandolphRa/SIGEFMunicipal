@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    internal class FinancieroProgramaticaCLS
+    public class FinancieroProgramaticaCLS
     {
         public int id { get; set; }
+        public int Codigo { get; set; }
         public int PNAP { get; set; }   
-        public int Programa { get; set; }   
+        public int Programa { get; set; }
+        public int Proyecto { get; set; }
         public int Actividad { get; set; }  
         public string EstProgControl { get; set; }
         public string Denominacion { get; set; }
