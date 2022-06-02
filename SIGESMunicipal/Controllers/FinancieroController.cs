@@ -11,7 +11,7 @@ namespace
         public string cadena()
         {
             IConfigurationBuilder builder = new ConfigurationBuilder();
-            builder.AddJsonFile(Path.Combine(Directory.GetCurrentDirectory(),"appsettings.json"));
+            builder.AddJsonFile(Path.Combine(Directory.GetCurrentDirectory(), "appsettings.json"));
             var root = builder.Build();
             var cn = root.GetConnectionString("cn");
             return cn;
@@ -31,6 +31,10 @@ namespace
         {
             return View();
         }
+        public IActionResult Programatico()
+        {
+            return View();
+        }
 
         public List<FinancieroClasificadoresCLS> ListarClasificadores()
         {
@@ -46,6 +50,11 @@ namespace
             FinancieroBL obj = new FinancieroBL();
             return obj.ListarFuentes();
 
+        }
+        public List<FinancieroProgramaticaCLS> ListarProgramatico()
+        {
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarProgramatico();
         }
     }
 }
