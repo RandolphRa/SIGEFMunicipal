@@ -10,7 +10,8 @@ namespace CapaNegocios
 {
     public class UsuarioNE
     {
-        public List<UsuarioEntity> Listarusuarios() { 
+        //Servicio que consume la capa datos
+        public List<FinancieroClasificadores> Listarusuarios() { 
         
             UsuarioDAT obj = new UsuarioDAT();
             return obj.ListarUsuarios();

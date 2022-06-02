@@ -24,8 +24,9 @@ namespace SIGEFMunicipal.Controllers
 
         }
 
-        public List<UsuarioEntity> ListarUsuario()
+        public List<FinancieroClasificadores> ListarUsuario()
         {
+            //Consume la capa negocios
             UsuarioNE obj = new UsuarioNE();
             return obj.Listarusuarios();
 

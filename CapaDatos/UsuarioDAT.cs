@@ -14,56 +14,108 @@ namespace CapaDatos
     {
        
 
-        public List<UsuarioEntity> ListarUsuarios() { 
-            List<UsuarioEntity> listaUsuarios = new List<UsuarioEntity>(); 
-            listaUsuarios.Add(new UsuarioEntity { 
+        //Servicio que llena la data pasarle Entidad
+        public List<FinancieroClasificadores> ListarUsuarios() { 
+            List<FinancieroClasificadores> listaUsuarios = new List<FinancieroClasificadores>(); 
+            listaUsuarios.Add(new FinancieroClasificadores
+            { 
                 ID = 1,
-                Name ="Randolph"
+                CLASIFICADOR = 1234,
+                DESCRIPCION = "Descripcion algo",
+                CUENTA_CONTROL = 23123,
+                TIPO = "NORMAL",
+                CLASIFICACION = "UNA CLASIFICACION",
+                CTA_CONTABLE =123123
             });
-            listaUsuarios.Add(new UsuarioEntity
+            listaUsuarios.Add(new FinancieroClasificadores
             {
-                ID = 2,
-                Name ="Randolph2"
+                ID = 1,
+                CLASIFICADOR = 1234,
+                DESCRIPCION = "Descripcion algo",
+                CUENTA_CONTROL = 23123,
+                TIPO = "NORMAL",
+                CLASIFICACION = "UNA CLASIFICACION",
+                CTA_CONTABLE =123123
             });
-            listaUsuarios.Add(new UsuarioEntity
+            listaUsuarios.Add(new FinancieroClasificadores
             {
-                ID = 2,
-                Name ="Randolph2"
+                ID = 1,
+                CLASIFICADOR = 1234,
+                DESCRIPCION = "Descripcion algo",
+                CUENTA_CONTROL = 23123,
+                TIPO = "NORMAL",
+                CLASIFICACION = "UNA CLASIFICACION",
+                CTA_CONTABLE =123123
             });
-            listaUsuarios.Add(new UsuarioEntity
+            listaUsuarios.Add(new FinancieroClasificadores
             {
-                ID = 2,
-                Name ="Randolph2"
+                ID = 1,
+                CLASIFICADOR = 1234,
+                DESCRIPCION = "Descripcion algo",
+                CUENTA_CONTROL = 23123,
+                TIPO = "NORMAL",
+                CLASIFICACION = "UNA CLASIFICACION",
+                CTA_CONTABLE =123123
             });
-            listaUsuarios.Add(new UsuarioEntity
+            listaUsuarios.Add(new FinancieroClasificadores
             {
-                ID = 2,
-                Name ="Randolph2"
+                ID = 1,
+                CLASIFICADOR = 1234,
+                DESCRIPCION = "Descripcion algo",
+                CUENTA_CONTROL = 23123,
+                TIPO = "NORMAL",
+                CLASIFICACION = "UNA CLASIFICACION",
+                CTA_CONTABLE =123123
             });
-            listaUsuarios.Add(new UsuarioEntity
+            listaUsuarios.Add(new FinancieroClasificadores
             {
-                ID = 2,
-                Name ="Randolph2"
+                ID = 1,
+                CLASIFICADOR = 1234,
+                DESCRIPCION = "Descripcion algo",
+                CUENTA_CONTROL = 23123,
+                TIPO = "NORMAL",
+                CLASIFICACION = "UNA CLASIFICACION",
+                CTA_CONTABLE =123123
             });
-            listaUsuarios.Add(new UsuarioEntity
+            listaUsuarios.Add(new FinancieroClasificadores
             {
-                ID = 2,
-                Name ="Randolph2"
+                ID = 1,
+                CLASIFICADOR = 1234,
+                DESCRIPCION = "Descripcion algo",
+                CUENTA_CONTROL = 23123,
+                TIPO = "NORMAL",
+                CLASIFICACION = "UNA CLASIFICACION",
+                CTA_CONTABLE =123123
             });
-            listaUsuarios.Add(new UsuarioEntity
+            listaUsuarios.Add(new FinancieroClasificadores
             {
-                ID = 2,
-                Name ="Randolph2"
+                ID = 1,
+                CLASIFICADOR = 1234,
+                DESCRIPCION = "Descripcion algo",
+                CUENTA_CONTROL = 23123,
+                TIPO = "NORMAL",
+                CLASIFICACION = "UNA CLASIFICACION",
+                CTA_CONTABLE =123123
             });
-            listaUsuarios.Add(new UsuarioEntity
+            listaUsuarios.Add(new FinancieroClasificadores
             {
-                ID = 2,
-                Name ="Randolph2"
+                ID = 1,
+                CLASIFICADOR = 1234,
+                DESCRIPCION = "Descripcion algo",
+                CUENTA_CONTROL = 23123,
+                TIPO = "NORMAL",
+                CLASIFICACION = "UNA CLASIFICACION",
+                CTA_CONTABLE =123123
             });
-            listaUsuarios.Add(new UsuarioEntity
+            listaUsuarios.Add(new FinancieroClasificadores
             {
-                ID = 2,
-                Name ="Randolph2"
+                ID = 1,
+                CLASIFICADOR = 1234,
+                DESCRIPCION = "Descripcion algo",
+                CUENTA_CONTROL = 23123,
+                TIPO = "NORMAL",
+                CLASIFICACION = "UNA CLASIFICACION",
+                CTA_CONTABLE =123123
             });
 
             return listaUsuarios;
