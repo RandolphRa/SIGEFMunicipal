@@ -140,6 +140,59 @@ namespace CapaDatos
 
         }
 
+        public List<FinancieroFuentesFinanciamientoCLS> ListarFuentesFinanciamiento()
+        {
+            List<FinancieroFuentesFinanciamientoCLS> ListaFuentes = new List<FinancieroFuentesFinanciamientoCLS>();
+
+            ListaFuentes.Add(new FinancieroFuentesFinanciamientoCLS
+            {
+                ID = 1,
+                CODIGO = 1234,
+                DENOMINACION = "Descripcion algo",
+                ORIGEN = "",
+                FONDO = 12312,
+                FUENTE = "UNA FUENTE",
+                GRUPO = "UNA CLASIFICACION"
+              
+            });
+            ListaFuentes.Add(new FinancieroFuentesFinanciamientoCLS
+            {
+                ID = 1,
+                CODIGO = 1234,
+                DENOMINACION = "Descripcion algo",
+                ORIGEN = "",
+                FONDO = 12312,
+                FUENTE = "UNA FUENTE",
+                GRUPO = "UNA CLASIFICACION"
+
+            });
+            ListaFuentes.Add(new FinancieroFuentesFinanciamientoCLS
+            {
+                ID = 1,
+                CODIGO = 1234,
+                DENOMINACION = "Descripcion algo",
+                ORIGEN = "",
+                FONDO = 12312,
+                FUENTE = "UNA FUENTE",
+                GRUPO = "UNA CLASIFICACION"
+
+            });
+            ListaFuentes.Add(new FinancieroFuentesFinanciamientoCLS
+            {
+                ID = 1,
+                CODIGO = 1234,
+                DENOMINACION = "Descripcion algo",
+                ORIGEN = "",
+                FONDO = 12312,
+                FUENTE = "UNA FUENTE",
+                GRUPO = "UNA CLASIFICACION"
+
+            });
+
+            return ListaFuentes;
+
+        }
+
         //public List<UsuarioEntity> ListarUsuarios2()
         //{
         //    List<UsuarioEntity> listaUsuarios = null;
