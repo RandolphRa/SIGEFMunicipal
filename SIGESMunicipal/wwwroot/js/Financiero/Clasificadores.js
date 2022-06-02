@@ -38,7 +38,7 @@ function listarTipoMedicamento() {
     objGlobalTipoMedicamento = {
 
         /*URL para listar data desde el controlador*/
-        url: "Home/ListarUsuario",
+        url: "Financiero/ListarClasificadores",
         /*Cabeceras Tabla*/
         cabeceras: ["id","Clasificador", "Descripcion", "Cuenta Control", "Tipo", "Clasificacion", "Cuenta Contable"],
         /*Propiedades del servicio*/

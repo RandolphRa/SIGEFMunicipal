@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CapaEntidad
 {
     //Entidad
-    public class FinancieroClasificadores
+    public class FinancieroClasificadoresCLS
     {
         public int ID { get; set; }
         public int CLASIFICADOR { get; set; }

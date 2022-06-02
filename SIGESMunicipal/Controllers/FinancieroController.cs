@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CapaEntidad;
+using CapaNegocios;
+using Microsoft.AspNetCore.Mvc;
 
 namespace 
     Municipal.Controllers
@@ -23,6 +25,14 @@ namespace
         public IActionResult Clasificadores()
         {
             return View();
+        }
+
+        public List<FinancieroClasificadoresCLS> ListarClasificadores()
+        {
+            //Consume la capa negocios
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarClasificadores();
+
         }
     }
 }

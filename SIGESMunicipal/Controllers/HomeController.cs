@@ -24,7 +24,7 @@ namespace SIGEFMunicipal.Controllers
 
         }
 
-        public List<FinancieroClasificadores> ListarUsuario()
+        public List<FinancieroClasificadoresCLS> ListarUsuario()
         {
             //Consume la capa negocios
             UsuarioNE obj = new UsuarioNE();

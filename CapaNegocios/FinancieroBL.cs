@@ -8,10 +8,10 @@ using CapaDatos;
 
 namespace CapaNegocios
 {
-    public class UsuarioNE
+    public class FinancieroBL
     {
         //Servicio que consume la capa datos
-        public List<FinancieroClasificadoresCLS> Listarusuarios() { 
+        public List<FinancieroClasificadoresCLS> ListarClasificadores() { 
         
             UsuarioDAT obj = new UsuarioDAT();
             return obj.ListarUsuarios();
