@@ -41,18 +41,17 @@ namespace
             return View();
         }
 
-<<<<<<< HEAD
         public IActionResult OrganismoFinanciador()
         {
             return View();
         }
 
-=======
+
         public IActionResult FuenteEspecifica()
         {
             return View();
         }
->>>>>>> c67a5e1c177c59281f7b297b24788c2e13bc0ae7
+
 
         public List<FinancieroClasificadoresCLS> ListarClasificadores()
         {
@@ -84,7 +83,15 @@ namespace
             FinancieroBL obj = new FinancieroBL();
             return obj.ListarFinancieroCatalogoOrganismos();
 
+        } 
+        public List<FinancieroProgramaticaCLS> ListarProgramatico()
+        {
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarProgramatico();
+
         }
+
+
         public List<FinancieroFuenteEspecificaCLS> ListarFuentesEsp()
         {
             FinancieroBL obj = new FinancieroBL();    

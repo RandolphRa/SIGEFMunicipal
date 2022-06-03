@@ -12,103 +12,44 @@ namespace CapaDatos
             listaUsuarios.Add(new FinancieroClasificadoresCLS
             { 
                 ID = 1,
-                CLASIFICADOR = 1234,
-                DESCRIPCION = "Descripcion algo",
-                CUENTA_CONTROL = 23123,
-                TIPO = "NORMAL",
-                CLASIFICACION = "UNA CLASIFICACION",
-                CTA_CONTABLE =123123
+                CLASIFICADOR = 11,
+                DESCRIPCION = "IMPUESTOS",
+                CUENTA_CONTROL = 11,
+                TIPO = "GENERAL",
+                CLASIFICACION = "INGRESOS",
+                CTA_CONTABLE = 345345345
             });
             listaUsuarios.Add(new FinancieroClasificadoresCLS
             {
-                ID = 1,
-                CLASIFICADOR = 1234,
-                DESCRIPCION = "Descripcion algo",
-                CUENTA_CONTROL = 23123,
-                TIPO = "NORMAL",
-                CLASIFICACION = "UNA CLASIFICACION",
-                CTA_CONTABLE =123123
+                ID = 2,
+                CLASIFICADOR = 111,
+                DESCRIPCION = "IMPUESTOS SOBRE LOS INGRESOS",
+                CUENTA_CONTROL = 111,
+                TIPO = "GENERAL",
+                CLASIFICACION = "INGRESOS",
+                CTA_CONTABLE = 1565452323
             });
             listaUsuarios.Add(new FinancieroClasificadoresCLS
             {
-                ID = 1,
-                CLASIFICADOR = 1234,
-                DESCRIPCION = "Descripcion algo",
-                CUENTA_CONTROL = 23123,
-                TIPO = "NORMAL",
-                CLASIFICACION = "UNA CLASIFICACION",
-                CTA_CONTABLE =123123
+                ID = 3,
+                CLASIFICADOR = 1111,
+                DESCRIPCION = "IMPUESTOS SOBRE EL PATRIMONIO",
+                CUENTA_CONTROL = 1111,
+                TIPO = "DETALLE",
+                CLASIFICACION = "INGRESOS",
+                CTA_CONTABLE = 1212523365
             });
             listaUsuarios.Add(new FinancieroClasificadoresCLS
             {
-                ID = 1,
-                CLASIFICADOR = 1234,
-                DESCRIPCION = "Descripcion algo",
-                CUENTA_CONTROL = 23123,
-                TIPO = "NORMAL",
-                CLASIFICACION = "UNA CLASIFICACION",
-                CTA_CONTABLE =123123
+                ID = 4,
+                CLASIFICADOR = 111,
+                DESCRIPCION = "IMPUESTOS SOBRE LA PROPIEDAD",
+                CUENTA_CONTROL = 111,
+                TIPO = "DETALLE",
+                CLASIFICACION = "INGRESOS",
+                CTA_CONTABLE = 1212523365
             });
-            listaUsuarios.Add(new FinancieroClasificadoresCLS
-            {
-                ID = 1,
-                CLASIFICADOR = 1234,
-                DESCRIPCION = "Descripcion algo",
-                CUENTA_CONTROL = 23123,
-                TIPO = "NORMAL",
-                CLASIFICACION = "UNA CLASIFICACION",
-                CTA_CONTABLE =123123
-            });
-            listaUsuarios.Add(new FinancieroClasificadoresCLS
-            {
-                ID = 1,
-                CLASIFICADOR = 1234,
-                DESCRIPCION = "Descripcion algo",
-                CUENTA_CONTROL = 23123,
-                TIPO = "NORMAL",
-                CLASIFICACION = "UNA CLASIFICACION",
-                CTA_CONTABLE =123123
-            });
-            listaUsuarios.Add(new FinancieroClasificadoresCLS
-            {
-                ID = 1,
-                CLASIFICADOR = 1234,
-                DESCRIPCION = "Descripcion algo",
-                CUENTA_CONTROL = 23123,
-                TIPO = "NORMAL",
-                CLASIFICACION = "UNA CLASIFICACION",
-                CTA_CONTABLE =123123
-            });
-            listaUsuarios.Add(new FinancieroClasificadoresCLS
-            {
-                ID = 1,
-                CLASIFICADOR = 1234,
-                DESCRIPCION = "Descripcion algo",
-                CUENTA_CONTROL = 23123,
-                TIPO = "NORMAL",
-                CLASIFICACION = "UNA CLASIFICACION",
-                CTA_CONTABLE =123123
-            });
-            listaUsuarios.Add(new FinancieroClasificadoresCLS
-            {
-                ID = 1,
-                CLASIFICADOR = 1234,
-                DESCRIPCION = "Descripcion algo",
-                CUENTA_CONTROL = 23123,
-                TIPO = "NORMAL",
-                CLASIFICACION = "UNA CLASIFICACION",
-                CTA_CONTABLE =123123
-            });
-            listaUsuarios.Add(new FinancieroClasificadoresCLS
-            {
-                ID = 1,
-                CLASIFICADOR = 1234,
-                DESCRIPCION = "Descripcion algo",
-                CUENTA_CONTROL = 23123,
-                TIPO = "NORMAL",
-                CLASIFICACION = "UNA CLASIFICACION",
-                CTA_CONTABLE =123123
-            });
+            
 
             return listaUsuarios;
         
@@ -118,76 +59,53 @@ namespace CapaDatos
             List<FinancieroProgramaticaCLS> listProgramatico = new List<FinancieroProgramaticaCLS>();
             listProgramatico.Add(new FinancieroProgramaticaCLS
             {
-                id=5,
-                PNAP = 5,
-               Programa = 5,
-               Proyecto = 5,
-               Actividad = 5,
-               EstProgControl = "Hola",
-               Denominacion = "Hola",
-               UnidadResponsable = "Hola"
+                id=1,
+                PNAP = 0,
+               Programa = 01,
+               Proyecto = 00,
+               Actividad = 0000,
+               EstProgControl = "00010000000",
+               Denominacion = "normas,Politicas y Administracion",
+               UnidadResponsable = "Consejo Municipal"
 
             });
             listProgramatico.Add(new FinancieroProgramaticaCLS
             {
-                id = 5,
-                PNAP = 5,
-                Programa = 5,
-                Proyecto = 5,
-                Actividad = 5,
-                EstProgControl = "Hola",
-                Denominacion = "Hola",
-                UnidadResponsable = "Hola"
+                id=1,
+                PNAP = 0,
+                Programa = 01,
+                Proyecto = 00,
+                Actividad = 0000,
+                EstProgControl = "00010000000",
+                Denominacion = "normas,Politicas y Administracion",
+                UnidadResponsable = "Consejo Municipal"
 
             });
             listProgramatico.Add(new FinancieroProgramaticaCLS
             {
-                id = 5,
-                PNAP = 5,
-                Programa = 5,
-                Proyecto = 5,
-                Actividad = 5,
-                EstProgControl = "Hola",
-                Denominacion = "Hola",
-                UnidadResponsable = "Hola"
+                id=2,
+                PNAP = 0,
+                Programa = 01,
+                Proyecto = 00,
+                Actividad = 0000,
+                EstProgControl = "00010000000",
+                Denominacion = "normas y Seguimientos",
+                UnidadResponsable = "Contraloria Municipal"
 
             });
             listProgramatico.Add(new FinancieroProgramaticaCLS
             {
-                id = 5, 
-                PNAP = 5,
-                Programa = 5,
-                Proyecto = 5,
-                Actividad = 5,
-                EstProgControl = "Hola",
-                Denominacion = "Hola",
-                UnidadResponsable = "Hola"
+                id=3,
+                PNAP = 0,
+                Programa = 11,
+                Proyecto = 00,
+                Actividad = 0003,
+                EstProgControl = "00010005000",
+                Denominacion = "normas,Politicas y Administracion",
+                UnidadResponsable = "Despacho del Alcalde"
 
             });
-            listProgramatico.Add(new FinancieroProgramaticaCLS
-            {
-                id = 5,
-                PNAP = 5,
-                Programa = 5,
-                Proyecto = 5,
-                Actividad = 5,
-                EstProgControl = "Hola",
-                Denominacion = "Hola",
-                UnidadResponsable = "Hola"
-
-            });
-            listProgramatico.Add(new FinancieroProgramaticaCLS
-            {
-                id = 5, 
-                PNAP = 5,
-                Programa = 5,
-                Proyecto = 5,
-                Actividad = 5,
-                EstProgControl = "Hola",
-                Denominacion = "Hola",
-                UnidadResponsable = "Hola"
-
-            });
+           
 
 
             return listProgramatico;
@@ -201,31 +119,31 @@ namespace CapaDatos
             listaUsuarios.Add(new FinancieroCatalogoFuncionesCLS
             {
                 ID = 1,
-                codigo = 1245,
-                finalidad = 1234,
-                funcion = 25,
-                subfuncion = 23123,
-                denominacion = "OPERACION FALCON",
+                codigo = 1232,
+                finalidad = 1,
+                funcion = 1,
+                subfuncion = 01,
+                denominacion = "SERVICIOS GENERALES",
 
             });
             listaUsuarios.Add(new FinancieroCatalogoFuncionesCLS
             {
                 ID = 1,
-                codigo = 1245,
-                finalidad = 1234,
-                funcion = 25,
-                subfuncion = 23123,
-                denominacion = "OPERACION FALCON",
+                codigo = 1232,
+                finalidad = 1,
+                funcion = 1,
+                subfuncion = 02,
+                denominacion = "ADMINISTRACION GENERAL",
 
             });
             listaUsuarios.Add(new FinancieroCatalogoFuncionesCLS
             {
                 ID = 1,
-                codigo = 1245,
-                finalidad = 1234,
-                funcion = 25,
-                subfuncion = 23123,
-                denominacion = "OPERACION FALCON",
+                codigo = 1232,
+                finalidad = 1,
+                funcion = 2,
+                subfuncion = 03,
+                denominacion = "RELACIONES INTERNACIONALES",
 
             });
 
