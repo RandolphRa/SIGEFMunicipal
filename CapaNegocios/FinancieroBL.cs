@@ -11,8 +11,8 @@ namespace CapaNegocios
     public class FinancieroBL
     {
         //Servicio que consume la capa datos
-        public List<FinancieroClasificadoresCLS> ListarClasificadores() { 
-        
+        public List<FinancieroClasificadoresCLS> ListarClasificadores() {
+
             UsuarioDAT obj = new UsuarioDAT();
             return obj.ListarUsuarios();
         }
@@ -39,11 +39,21 @@ namespace CapaNegocios
             return obj.ListarEtsProgramatico();
 
         }
+<<<<<<< HEAD
 
         public List<FinancieroCatalogoOrganismosFinanciadoresCLS> ListarFinancieroCatalogoOrganismos()
         {
             FinancieroDAL obj = new FinancieroDAL();
             return obj.ListarFinancieroCatalogoOrganismos();
         }
+=======
+        public List<FinancieroFuenteEspecificaCLS>ListarFuentesEsp()
+        {
+
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarFuentesEspecificas();
+        }
+
+>>>>>>> c67a5e1c177c59281f7b297b24788c2e13bc0ae7
     }
 }
