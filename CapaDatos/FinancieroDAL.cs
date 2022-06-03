@@ -286,6 +286,97 @@ namespace CapaDatos
 
         }
 
+
+        public List<FinancieroFuenteEspecificaCLS> ListarFuentesEspecificas()
+        {
+            List<FinancieroFuenteEspecificaCLS> ListaEspecificas = new List<FinancieroFuenteEspecificaCLS>();
+            ListaEspecificas.Add(new FinancieroFuenteEspecificaCLS
+            {
+                id=1,
+                codigo=5,
+                fuente =5,
+                denominacion= "UNA FUENTE"
+
+
+            });
+
+            ListaEspecificas.Add(new FinancieroFuenteEspecificaCLS
+            {
+                id = 1,
+                codigo = 5,
+                fuente = 5,
+                denominacion = "UNA FUENTE"
+
+
+            });
+            ListaEspecificas.Add(new FinancieroFuenteEspecificaCLS
+            {
+                id = 1,
+                codigo = 5,
+                fuente = 5,
+                denominacion = "UNA FUENTE"
+
+
+            });
+            ListaEspecificas.Add(new FinancieroFuenteEspecificaCLS
+            {
+                id = 1,
+                codigo = 5,
+                fuente = 5,
+                denominacion = "UNA FUENTE"
+
+
+            });
+            ListaEspecificas.Add(new FinancieroFuenteEspecificaCLS
+            {
+                id = 1,
+                codigo = 5,
+                fuente = 5,
+                denominacion = "UNA FUENTE"
+
+
+            });
+            ListaEspecificas.Add(new FinancieroFuenteEspecificaCLS
+            {
+                id = 1,
+                codigo = 5,
+                fuente = 5,
+                denominacion = "UNA FUENTE"
+
+
+            });
+            ListaEspecificas.Add(new FinancieroFuenteEspecificaCLS
+            {
+                id = 1,
+                codigo = 5,
+                fuente = 5,
+                denominacion = "UNA FUENTE"
+
+
+            });
+            ListaEspecificas.Add(new FinancieroFuenteEspecificaCLS
+            {
+                id = 1,
+                codigo = 5,
+                fuente = 5,
+                denominacion = "UNA FUENTE"
+
+
+            });
+            ListaEspecificas.Add(new FinancieroFuenteEspecificaCLS
+            {
+                id = 1,
+                codigo = 5,
+                fuente = 5,
+                denominacion = "UNA FUENTE"
+
+
+            });
+            return ListaEspecificas;
+
+
+        }
+
         //public List<UsuarioEntity> ListarUsuarios2()
         //{
         //    List<UsuarioEntity> listaUsuarios = null;

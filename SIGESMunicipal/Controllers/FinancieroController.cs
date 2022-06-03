@@ -41,6 +41,10 @@ namespace
             return View();
         }
 
+        public IActionResult FuenteEspecifica()
+        {
+            return View();
+        }
 
         public List<FinancieroClasificadoresCLS> ListarClasificadores()
         {
@@ -70,6 +74,12 @@ namespace
         {
             FinancieroBL obj = new FinancieroBL();
             return obj.ListarProgramatico();
+
+        }
+        public List<FinancieroFuenteEspecificaCLS> ListarFuentesEsp()
+        {
+            FinancieroBL obj = new FinancieroBL();    
+            return obj.ListarFuentesEsp();
 
         }
     }
