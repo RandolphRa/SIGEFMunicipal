@@ -41,6 +41,11 @@ namespace
             return View();
         }
 
+        public IActionResult OrganismoFinanciador()
+        {
+            return View();
+        }
+
 
         public List<FinancieroClasificadoresCLS> ListarClasificadores()
         {
@@ -58,17 +63,19 @@ namespace
 
         }
 
+
         public List<FinancieroCatalogoFuncionesCLS> ListarCatalogoFunciones()
         {
             //Consume la capa negocios
             FinancieroBL obj = new FinancieroBL();
             return obj.ListarCatalogoFunciones();
-
         }
-        public List<FinancieroProgramaticaCLS> ListarProgramatico()
+
+        
+        public List<FinancieroCatalogoOrganismosFinanciadoresCLS> ListarFinancieroCatalogoOrganismos()
         {
             FinancieroBL obj = new FinancieroBL();
-            return obj.ListarProgramatico();
+            return obj.ListarFinancieroCatalogoOrganismos();
 
         }
     }

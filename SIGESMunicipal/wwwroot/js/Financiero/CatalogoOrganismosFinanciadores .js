@@ -25,24 +25,16 @@ function filtrarTipoMedicamento() {
     }
 }
 
-ID = 1,
-    CLASIFICADOR = 1234,
-    DESCRIPCION = "Descripcion algo",
-    CUENTA_CONTROL = 23123,
-    TIPO = "NORMAL",
-    CLASIFICACION = "UNA CLASIFICACION",
-    CTA_CONTABLE = 123123
-
 
 function listarTipoMedicamento() {
     objGlobalTipoMedicamento = {
-      
+
         /*URL para listar data desde el controlador*/
-        url: "Financiero/ListarFuentes",
+        url: "Financiero/ListarFinancieroCatalogoOrganismos",
         /*Cabeceras Tabla*/
-        cabeceras: ["id","Grupo", "Fuente", "Fondo", "Denominacion"],
+        cabeceras: ["id","Grupo", "Sub-Grupo", "Org.Fin.", "Denominacion"],
         /*Propiedades del servicio*/
-        propiedades: ["id", "grupo","fuente", "fondo", "denominacion"],
+        propiedades: ["id", "grupo", "subgrupo", "orgfin", "denominacion"],
         editar: false,
         eliminar: false,
         propiedadId: "id",
@@ -68,7 +60,12 @@ function listarTipoMedicamento() {
                 {
                     label: "Codigo",
                     readonly: true,
-                 
+
+                    //nuevas
+
+
+                    //
+                    class: "col-md-3",
                     name: "iidmedicamento"
                 },
             ],
@@ -76,8 +73,8 @@ function listarTipoMedicamento() {
             [
                 {
                     //div
-                    class: "col-md-6",
-                    label: "Fondo",
+                    class: "col-md-3",
+                    label: "Finalidad",
                     name: "iidtipomedicamento",
                     
                     data: "hola",
@@ -87,26 +84,30 @@ function listarTipoMedicamento() {
 
                 },
                 {
-                    label: "Fuente",
+                    label: "Funcion",
 
-                    class: "col-md-6",
+                    class: "col-md-1",
                     name: "usomedicamento"
                 },
                 {
-                    label: "Origen",
+                    label: "Sub-Funcion",
 
-                    class: "col-md-6",
+                    class: "col-md-2",
                     name: "usomedicamento",
-                   
+                  
+                    id: "cboLaboratorioFormulario",
+
                 },
+                
+            ],
+            [
                 {
                     label: "Denominacion",
 
-                    class: "col-md-6",
-                    name: "usomedicamento"
+                    class: "col-md-8",
+                    name: "contenido"
                 }
-            ],
-        
+            ]
 
         ]
     }
@@ -120,12 +121,12 @@ function listarTipoMedicamento() {
             [
                 {
                     //div
-                    class: "col-md-4",
+                    class: "col-md-2",
                     label: "Codigo",
-                    name: "Descripcion"
+                    name: "Codigo"
 
                 },
-           
+                
 
             ]
         ]

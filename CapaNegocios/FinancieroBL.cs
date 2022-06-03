@@ -24,18 +24,26 @@ namespace CapaNegocios
             return obj.ListarFuentesFinanciamiento();
         }
 
+
         public List<FinancieroCatalogoFuncionesCLS> ListarCatalogoFunciones()
         {
 
             FinancieroDAL obj = new FinancieroDAL();
             return obj.ListarFinancieroCatalogo();
         }
+
         public List<FinancieroProgramaticaCLS> ListarProgramatico()
         {
 
             FinancieroDAL obj = new FinancieroDAL();
             return obj.ListarEtsProgramatico();
 
+        }
+
+        public List<FinancieroCatalogoOrganismosFinanciadoresCLS> ListarFinancieroCatalogoOrganismos()
+        {
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarFinancieroCatalogoOrganismos();
         }
     }
 }

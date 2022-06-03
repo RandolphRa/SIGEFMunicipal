@@ -285,6 +285,34 @@ namespace CapaDatos
 
 
         }
+        public List<FinancieroCatalogoOrganismosFinanciadoresCLS> ListarFinancieroCatalogoOrganismos()
+        {
+            List<FinancieroCatalogoOrganismosFinanciadoresCLS> ListaFuentes = new List<FinancieroCatalogoOrganismosFinanciadoresCLS>();
+            ListaFuentes.Add(new FinancieroCatalogoOrganismosFinanciadoresCLS
+            {
+                id = 1,
+                grupo = 1234,
+                subgrupo = 3,
+                orgfin = 4,
+                denominacion = "Soy una denominacion",
+
+
+            });
+            ListaFuentes.Add(new FinancieroCatalogoOrganismosFinanciadoresCLS
+            {
+                id = 1,
+                grupo = 1234,
+                subgrupo = 3,
+                orgfin = 4,
+                denominacion = "Soy una denominacion",
+
+
+            });
+
+            return ListaFuentes;
+
+
+        }
 
         //public List<UsuarioEntity> ListarUsuarios2()
         //{
