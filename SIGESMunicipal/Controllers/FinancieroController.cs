@@ -51,7 +51,26 @@ namespace
         {
             return View();
         }
-
+        public IActionResult ActivosFijos()
+        {
+            return View();
+        }
+        public IActionResult EjecucionPresuesto()
+        {
+            return View();
+        }
+        public IActionResult ConciliacionBancaria()
+        {
+            return View();
+        }
+        public IActionResult CuentasPagar()
+        {
+            return View();
+        }
+        public IActionResult FacturacionCobros()
+        {
+            return View();
+        }
 
         public List<FinancieroClasificadoresCLS> ListarClasificadores()
         {
