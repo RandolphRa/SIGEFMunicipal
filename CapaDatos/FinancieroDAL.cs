@@ -239,9 +239,9 @@ namespace CapaDatos
             ListaEspecificas.Add(new FinancieroFuenteEspecificaCLS
             {
                 id=1,
-                codigo=5,
-                fuente =5,
-                denominacion= "UNA FUENTE"
+                codigo=0100,
+                fuente =60,
+                denominacion= "TERMOELECTRICA BARAHONA"
 
 
             });
