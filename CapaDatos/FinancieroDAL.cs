@@ -157,45 +157,67 @@ namespace CapaDatos
             ListaFuentes.Add(new FinancieroFuentesFinanciamientoCLS
             {
                 ID = 1,
-                CODIGO = 1234,
-                DENOMINACION = "Descripcion algo",
+                CODIGO = 0000,
+                DENOMINACION = "Fuentes Internas",
                 ORIGEN = "",
-                FONDO = 12312,
-                FUENTE = "UNA FUENTE",
-                GRUPO = "UNA CLASIFICACION"
-              
-            });
-            ListaFuentes.Add(new FinancieroFuentesFinanciamientoCLS
-            {
-                ID = 1,
-                CODIGO = 1234,
-                DENOMINACION = "Descripcion algo",
-                ORIGEN = "",
-                FONDO = 12312,
-                FUENTE = "UNA FUENTE",
-                GRUPO = "UNA CLASIFICACION"
+                FONDO = 0000,
+                FUENTE = " ",
+                GRUPO = "1"
 
             });
             ListaFuentes.Add(new FinancieroFuentesFinanciamientoCLS
             {
                 ID = 1,
-                CODIGO = 1234,
-                DENOMINACION = "Descripcion algo",
+                CODIGO = 0000,
+                DENOMINACION = "Fondo General",
                 ORIGEN = "",
-                FONDO = 12312,
-                FUENTE = "UNA FUENTE",
-                GRUPO = "UNA CLASIFICACION"
+                FONDO = 0000,
+                FUENTE = "10",
+                GRUPO = "10"
 
             });
             ListaFuentes.Add(new FinancieroFuentesFinanciamientoCLS
             {
                 ID = 1,
-                CODIGO = 1234,
-                DENOMINACION = "Descripcion algo",
+                CODIGO = 0000,
+                DENOMINACION = "Fondos de Destino Especifico",
                 ORIGEN = "",
-                FONDO = 12312,
-                FUENTE = "UNA FUENTE",
-                GRUPO = "UNA CLASIFICACION"
+                FONDO = 0000,
+                FUENTE = "20",
+                GRUPO = "1"
+
+            });
+            ListaFuentes.Add(new FinancieroFuentesFinanciamientoCLS
+            {
+                ID = 1,
+                CODIGO = 0000,
+                DENOMINACION = "Fondos Propios",
+                ORIGEN = "",
+                FONDO = 0000,
+                FUENTE = "30",
+                GRUPO = "1"
+
+            });
+            ListaFuentes.Add(new FinancieroFuentesFinanciamientoCLS
+            {
+                ID = 1,
+                CODIGO = 0000,
+                DENOMINACION = "Transferencias",
+                ORIGEN = "",
+                FONDO = 0000,
+                FUENTE = "40",
+                GRUPO = "1"
+
+            });
+            ListaFuentes.Add(new FinancieroFuentesFinanciamientoCLS
+            {
+                ID = 1,
+                CODIGO = 0000,
+                DENOMINACION = "Credito Internos",
+                ORIGEN = "",
+                FONDO = 0000,
+                FUENTE = "50",
+                GRUPO = "1"
 
             });
 
@@ -209,20 +231,60 @@ namespace CapaDatos
             ListaFuentes.Add(new FinancieroCatalogoOrganismosFinanciadoresCLS
             {
                 id = 1,
-                grupo = 1234,
-                subgrupo = 3,
-                orgfin = 4,
-                denominacion = "Soy una denominacion",
+                grupo = 1,
+                subgrupo = 1,
+                orgfin = 1,
+                denominacion = "Organismo Internos",
 
 
             });
             ListaFuentes.Add(new FinancieroCatalogoOrganismosFinanciadoresCLS
             {
                 id = 1,
-                grupo = 1234,
-                subgrupo = 3,
-                orgfin = 4,
-                denominacion = "Soy una denominacion",
+                grupo = 1,
+                subgrupo = 1,
+                orgfin = 1,
+                denominacion = "Bancos Nacionales",
+
+
+            });
+            ListaFuentes.Add(new FinancieroCatalogoOrganismosFinanciadoresCLS
+            {
+                id = 1,
+                grupo = 1,
+                subgrupo = 1,
+                orgfin = 1,
+                denominacion = "Banco de Reservas de la Republica Dominicana (BANRESERVAS)",
+
+
+            });
+            ListaFuentes.Add(new FinancieroCatalogoOrganismosFinanciadoresCLS
+            {
+                id = 1,
+                grupo = 1,
+                subgrupo = 1,
+                orgfin = 99,
+                denominacion = "Otros Bancos Nacionales",
+
+
+            });
+            ListaFuentes.Add(new FinancieroCatalogoOrganismosFinanciadoresCLS
+            {
+                id = 1,
+                grupo = 1,
+                subgrupo = 2,
+                orgfin = 1,
+                denominacion = "Otros Organismos Internos",
+
+
+            });
+            ListaFuentes.Add(new FinancieroCatalogoOrganismosFinanciadoresCLS
+            {
+                id = 1,
+                grupo = 1,
+                subgrupo = 2,
+                orgfin = 100,
+                denominacion = "Tesoro Nacional",
 
 
             });
@@ -239,7 +301,7 @@ namespace CapaDatos
             ListaEspecificas.Add(new FinancieroFuenteEspecificaCLS
             {
                 id=1,
-                codigo=0100,
+                codigo=0332,
                 fuente =60,
                 denominacion= "TERMOELECTRICA BARAHONA"
 
@@ -249,72 +311,72 @@ namespace CapaDatos
             ListaEspecificas.Add(new FinancieroFuenteEspecificaCLS
             {
                 id = 1,
-                codigo = 5,
-                fuente = 5,
-                denominacion = "UNA FUENTE"
+                codigo = 0100,
+                fuente = 60,
+                denominacion = "Fondo General"
 
 
             });
             ListaEspecificas.Add(new FinancieroFuenteEspecificaCLS
             {
                 id = 1,
-                codigo = 5,
-                fuente = 5,
-                denominacion = "UNA FUENTE"
+                codigo = 0346,
+                fuente = 60,
+                denominacion = "Proyecto Rio Blanco del Inst. Nac. de Rec. Hidraulicos"
 
 
             });
             ListaEspecificas.Add(new FinancieroFuenteEspecificaCLS
             {
                 id = 1,
-                codigo = 5,
-                fuente = 5,
-                denominacion = "UNA FUENTE"
+                codigo = 0374,
+                fuente = 60,
+                denominacion = "Proyecto Metro Santo Domingo- Opret"
 
 
             });
             ListaEspecificas.Add(new FinancieroFuenteEspecificaCLS
             {
                 id = 1,
-                codigo = 5,
-                fuente = 5,
-                denominacion = "UNA FUENTE"
+                codigo = 0350,
+                fuente = 60,
+                denominacion = "Rehabilitacion de la Cde Bid 585/OC-DR"
 
 
             });
             ListaEspecificas.Add(new FinancieroFuenteEspecificaCLS
             {
                 id = 1,
-                codigo = 5,
-                fuente = 5,
-                denominacion = "UNA FUENTE"
+                codigo = 0351,
+                fuente = 60,
+                denominacion = "Proyecto Para la Educacion Basica"
 
 
             });
             ListaEspecificas.Add(new FinancieroFuenteEspecificaCLS
             {
                 id = 1,
-                codigo = 5,
-                fuente = 5,
-                denominacion = "UNA FUENTE"
+                codigo = 0352,
+                fuente = 60,
+                denominacion = "Proyecto de Rehabilitacion y Mantenimiento Carreteras"
 
 
             });
             ListaEspecificas.Add(new FinancieroFuenteEspecificaCLS
             {
                 id = 1,
-                codigo = 5,
-                fuente = 5,
-                denominacion = "UNA FUENTE"
+                codigo = 0354,
+                fuente = 60,
+                denominacion = "2o Programa Mejoramiento Educacion Basica BIRF 3951-DO"
 
 
             });
             ListaEspecificas.Add(new FinancieroFuenteEspecificaCLS
             {
                 id = 1,
-                codigo = 5,
-                fuente = 5,
-                denominacion = "UNA FUENTE"
+                codigo = 0355,
+                fuente = 60,
+                denominacion = "Mejoramiento de la Eduacion Basica BID 897/OC-DR"
 
 
             });
