@@ -161,3 +161,12 @@ body {
     .login-main-text h2 {
         font-weight: 300;
     }
+=======
+.bg-azul:hover {
+    background-color: #002d5de0 !important;
+}
+li:hover {
+    color: #002d5d !important;
+    font-size: 18px;
+}
+>>>>>>> 8fe784b99473289694b8f3d46e1f7be7683a42f9
