@@ -94,3 +94,10 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+.bg-azul:hover {
+    background-color: #002d5de0 !important;
+}
+li:hover {
+    color: #002d5de0 !important;
+    font-size: 18px;
+}
