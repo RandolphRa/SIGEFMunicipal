@@ -95,6 +95,44 @@ body {
     background-size: 100% 100%;
 }
 
+.ActivosFijos-bg {
+    background-image: url("..//Resources//ActivosFijos.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.Contabilidad-bg {
+    background-image: url("..//Resources//Contabilidad.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.ConciliarioBancario-bg {
+    background-image: url("..//Resources//ConciliacionBancaria.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.CuentasPorPagar-bg {
+    background-image: url("..//Resources//CuentasPorPagar.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.FacturacionYCobro-bg {
+    background-image: url("..//Resources//FacturacionYCobro.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.EjecucionPresupuesto-bg {
+    background-image: url("..//Resources//EjecucionPresupuesto.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+
 .main-head {
     height: 150px;
     background: #FFF;
