@@ -49,6 +49,11 @@ body {
 .bg-azul {
     background-color:var(--AZUL) !important;
 }
+
+.bg-header {
+    background-color: var(--AZUL) !important;
+}
+
 .bg-rojo {
     background-color:var(--ROJO) !important;
 }
@@ -204,7 +209,8 @@ body {
         font-size: 25px;
     }
 .bg-azul:hover {
-    background-color: #002d5de0 !important;
+    transform: scale(1.1);
+    transition: ease 0.5s;
 }
 li:hover {
     color: #002d5d !important;
