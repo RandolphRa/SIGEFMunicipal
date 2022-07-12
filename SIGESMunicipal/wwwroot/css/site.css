@@ -43,7 +43,7 @@ body {
 .module-item {
     height: 200px;
     width: 200px;
-    padding: 0px;
+    padding: 15px 0 0 0;
 }
 
 .bg-azul {
@@ -73,68 +73,80 @@ body {
 .presupuesto-bg {
     background-image: url("..//Resources//Presupuesto.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 .calculadora-bg {
     background-image: url("..//Resources//Calculadora.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 .presentacion-bg {
     background-image: url("..//Resources//Presentacion.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 .grafico-circular-bg {
     background-image: url("..//Resources//GraficoCircular.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 .logo-liga-bg {
     background-image: url("..//Resources//LogoLiga.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 .presupuesto-bg {
     background-image: url("..//Resources//Presupuesto.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 
 .ActivosFijos-bg {
     background-image: url("..//Resources//ActivosFijos.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 
 .Contabilidad-bg {
     background-image: url("..//Resources//Contabilidad.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 
 .ConciliarioBancario-bg {
     background-image: url("..//Resources//ConciliacionBancaria.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 
 .CuentasPorPagar-bg {
     background-image: url("..//Resources//CuentasPorPagar.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 
 .FacturacionYCobro-bg {
     background-image: url("..//Resources//FacturacionYCobro.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 
 .EjecucionPresupuesto-bg {
     background-image: url("..//Resources//EjecucionPresupuesto.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 
 
