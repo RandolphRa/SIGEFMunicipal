@@ -130,9 +130,22 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+.Nomina-bg {
+    background-image: url("..//Resources//Nomina.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.Proceso-bg {
+    background-image: url("..//Resources//Proceso.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
 
-
-
+.Compra-bg {
+    background-image: url("..//Resources//Compra.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
 .main-head {
     height: 150px;
     background: #FFF;
