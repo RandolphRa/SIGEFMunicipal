@@ -1,4 +1,5 @@
 ﻿using CapaEntidad;
+using System.Collections.Generic;
 
 namespace CapaDatos
 {

@@ -237,6 +237,16 @@ body {
         font-weight: bold;
         font-size: 25px;
     }
+
+.login-olvidoClave {
+    text-align: center;
+}
+.login-olvidoClave a{
+    text-decoration:none;
+}
+    .login-olvidoClave a:hover {
+        color: #3682f1;
+    }
 .bg-azul:hover {
     transform: scale(1.1);
     transition: ease 0.5s;
