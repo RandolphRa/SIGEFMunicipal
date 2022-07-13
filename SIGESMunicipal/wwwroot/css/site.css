@@ -22,6 +22,7 @@ html {
 body {
     margin-bottom: 60px;
     font-weight: bold !important;
+    font-family: 'Roboto', sans-serif;
 }
 .my-custom-scrollbar {
     position: relative;
@@ -42,12 +43,17 @@ body {
 .module-item {
     height: 200px;
     width: 200px;
-    padding: 0px;
+    padding: 15px 0 0 0;
 }
 
 .bg-azul {
     background-color:var(--AZUL) !important;
 }
+
+.bg-header {
+    background-color: var(--AZUL) !important;
+}
+
 .bg-rojo {
     background-color:var(--ROJO) !important;
 }
@@ -67,68 +73,80 @@ body {
 .presupuesto-bg {
     background-image: url("..//Resources//Presupuesto.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 .calculadora-bg {
     background-image: url("..//Resources//Calculadora.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 .presentacion-bg {
     background-image: url("..//Resources//Presentacion.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 .grafico-circular-bg {
     background-image: url("..//Resources//GraficoCircular.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 .logo-liga-bg {
     background-image: url("..//Resources//LogoLiga.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 .presupuesto-bg {
     background-image: url("..//Resources//Presupuesto.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 
 .ActivosFijos-bg {
     background-image: url("..//Resources//ActivosFijos.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 
 .Contabilidad-bg {
     background-image: url("..//Resources//Contabilidad.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 
 .ConciliarioBancario-bg {
     background-image: url("..//Resources//ConciliacionBancaria.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 
 .CuentasPorPagar-bg {
     background-image: url("..//Resources//CuentasPorPagar.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 
 .FacturacionYCobro-bg {
     background-image: url("..//Resources//FacturacionYCobro.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 
 .EjecucionPresupuesto-bg {
     background-image: url("..//Resources//EjecucionPresupuesto.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 85% 85%;
+    background-position: center;
 }
 .Nomina-bg {
     background-image: url("..//Resources//Nomina.png");
@@ -216,10 +234,12 @@ body {
         font-size: 25px;
     }
 .bg-azul:hover {
-    background-color: #002d5de0 !important;
+    transform: scale(1.1);
+    transition: ease 0.5s;
 }
 li:hover {
     color: #002d5d !important;
     font-size: 18px;
+    transition: ease 0.5s;
 }
 
