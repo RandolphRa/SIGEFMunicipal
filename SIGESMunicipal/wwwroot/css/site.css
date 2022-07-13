@@ -149,9 +149,25 @@ body {
     background-size: 85% 85%;
     background-position: center;
 }
+.Nomina-bg {
+    background-image: url("..//Resources//Nomina.png");
+    background-repeat: no-repeat;
+    background-size: 85% 85%;
+    background-position: center;
+}
+.Proceso-bg {
+    background-image: url("..//Resources//Proceso.png");
+    background-repeat: no-repeat;
+    background-size: 85% 85%;
+    background-position: center;
+}
 
-
-
+.Compra-bg {
+    background-image: url("..//Resources//Compra.png");
+    background-repeat: no-repeat;
+    background-size: 85% 85%;
+    background-position: center;
+}
 .main-head {
     height: 150px;
     background: #FFF;
