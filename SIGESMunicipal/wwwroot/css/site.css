@@ -48,6 +48,7 @@ body {
 
 .bg-azul {
     background-color:var(--AZUL) !important;
+    cursor:pointer;
 }
 
 .bg-header {
