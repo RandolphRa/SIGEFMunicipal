@@ -72,6 +72,19 @@ namespace
             return View();
         }
 
+        public IActionResult Ingresos()
+        {
+            return View();
+        }
+        public IActionResult Gastos()
+        {
+            return View();
+        }
+        public IActionResult Proyecto()
+        {
+            return View();
+        }
+
         public List<FinancieroClasificadoresCLS> ListarClasificadores()
         {
             //Consume la capa negocios
@@ -115,6 +128,24 @@ namespace
         {
             FinancieroBL obj = new FinancieroBL();    
             return obj.ListarFuentesEsp();
+
+        }
+        public List<IngresosCLS> ListarIngresos()
+        {
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarIngresos();
+
+        }
+        public List<GastosCLS> ListarGastos()
+        {
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarGastos();
+
+        }
+        public List<ProyectoCLS> ListarProyecto()
+        {
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarProyecto();
 
         }
     }

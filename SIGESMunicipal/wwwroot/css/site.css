@@ -162,8 +162,68 @@ body {
     background-position: center;
 }
 
+.Accion-bg {
+    background-image: url("..//Resources//Accion.png");
+    background-repeat: no-repeat;
+    background-size: 85% 85%;
+    background-position: center;
+}
+.Evaluacion-bg {
+    background-image: url("..//Resources//Registro.png");
+    
+    background-repeat: no-repeat;
+    background-size: 85% 85%;
+    background-position: center;
+}
+.Personal-bg {
+    background-image: url("..//Resources//Evaluacion.png");
+    background-repeat: no-repeat;
+    background-size: 85% 85%;
+    background-position: center;
+}
 .Compra-bg {
     background-image: url("..//Resources//Compra.png");
+    background-repeat: no-repeat;
+    background-size: 85% 85%;
+    background-position: center;
+}
+.transportacion-bg {
+    background-image: url("..//Resources//Transporte.png");
+    background-repeat: no-repeat;
+    background-size: 85% 85%;
+    background-position: center;
+}
+
+.visitas-bg {
+    background-image: url("..//Resources//Visitas.png");
+    background-repeat: no-repeat;
+    background-size: 85% 85%;
+    background-position: center;
+}
+
+.viaticos-bg {
+    background-image: url("..//Resources//Viaticos.png");
+    background-repeat: no-repeat;
+    background-size: 85% 85%;
+    background-position: center;
+}
+
+.caja-bg {
+    background-image: url("..//Resources//CajaChica.png");
+    background-repeat: no-repeat;
+    background-size: 85% 85%;
+    background-position: center;
+}
+
+.combustibles-bg {
+    background-image: url("..//Resources//Combustibles.png");
+    background-repeat: no-repeat;
+    background-size: 85% 85%;
+    background-position: center;
+}
+
+.digitalizacion-bg {
+    background-image: url("..//Resources//Digitalizacion.png");
     background-repeat: no-repeat;
     background-size: 85% 85%;
     background-position: center;

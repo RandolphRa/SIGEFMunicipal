@@ -53,5 +53,24 @@ namespace CapaNegocios
             return obj.ListarFuentesEspecificas();
         }
 
+        public List<IngresosCLS> ListarIngresos()
+        {
+
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarIngresos();
+        }
+
+        public List<GastosCLS> ListarGastos()
+        {
+
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarGastos();
+        }
+        public List<ProyectoCLS> ListarProyecto()
+        {
+
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarProyecto();
+        }
     }
 }

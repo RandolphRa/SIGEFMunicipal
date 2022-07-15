@@ -18,7 +18,11 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
            
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/Resources/logo.png" style="height: 100px;margin-top: -20px;margin-bottom: -20px;"/></a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/Resources/Escudo.png" style="height: 95px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    margin-left: 40px;"/></a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/Resources/LogoTemp.png" style="height: 100px;margin-top: -20px;margin-bottom: -20px; margin-left: 720px;"/></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -32,7 +36,7 @@
     </header>
 
     <input type="hidden" id="hdfOculto" value="@Url.Content("~")">
-     <div class="bg-header pr-2 pl- 2 mb-4" style="ALIGN-ITEMS: center; margin-top: -19px;display: flex;justify-content: space-between;"><div class="">Ayuntamiento de algun lugar</div>  <div  style="padding-right: 20px;"> <img style="width:58px" src="~/Resources/MensajeVacio.png"/> <img style="width:45px" src="~/Resources/notificacionVacio.png"/> Fulanodetal</div> </div>
+     <div class="bg-header pr-2 pl- 2 mb-4" style="ALIGN-ITEMS: center; margin-top: -19px;display: flex;justify-content: space-between;"><div class="">Ayuntamiento de algún lugar</div>  <div  style="padding-right: 20px;"> <img style="width:58px" src="~/Resources/MensajeVacio.png"/> <img style="width:45px" src="~/Resources/notificacionVacio.png"/> Usuario </div> </div>
     <div class="container-fluid ">
          <main role="main" class="pb-3 text-white" >
         <div class="row">
@@ -44,11 +48,11 @@
                      <div class="col-3" onclick="location.href='@Url.Action("Index", "ComprasContrataciones")'">
                            <button class="text-white font-weight-bold buttons-modules btn bg-azul  ">Compras</button>
                     </div>
-                     <div class="col-3" onclick="location.href='@Url.Action("Index", "RRHH")'">
+                     <div class="col-3" onclick="location.href='@Url.Action("Home", "RRHH")'">
                            <button class="text-white font-weight-bold buttons-modules btn bg-azul  ">RRHH</button>
                     </div>
-                     <div class="col-3">
-                           <button class="text-white font-weight-bold buttons-modules btn bg-azul  ">Otros</button>
+                     <div class="col-3" onclick="location.href='@Url.Action("Administrativo", "Home")'">
+                           <button class="text-white font-weight-bold buttons-modules btn bg-azul  ">Administrativo</button>
                     </div>
                  
        

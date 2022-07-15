@@ -9,5 +9,10 @@ namespace
         {
             return View();
         }
+        public IActionResult Home()
+        {
+            return View();
+        }
+
     }
 }

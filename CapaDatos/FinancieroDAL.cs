@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace CapaDatos
 {
-    public class FinancieroDAL:CadenaDAL
+    public class FinancieroDAL : CadenaDAL
     {
-       
+
 
         //Servicio que llena la data pasarle Entidad
-        public List<FinancieroClasificadoresCLS> ListarClasificadores() { 
-            List<FinancieroClasificadoresCLS> listaUsuarios = new List<FinancieroClasificadoresCLS>(); 
+        public List<FinancieroClasificadoresCLS> ListarClasificadores() {
+            List<FinancieroClasificadoresCLS> listaUsuarios = new List<FinancieroClasificadoresCLS>();
             listaUsuarios.Add(new FinancieroClasificadoresCLS
-            { 
+            {
                 ID = 1,
                 CLASIFICADOR = 11,
                 DESCRIPCION = "IMPUESTOS",
@@ -50,29 +50,17 @@ namespace CapaDatos
                 CLASIFICACION = "INGRESOS",
                 CTA_CONTABLE = 1212523365
             });
-            
+
 
             return listaUsuarios;
-        
+
         }
         public List<FinancieroProgramaticaCLS> ListarEtsProgramatico()
         {
             List<FinancieroProgramaticaCLS> listProgramatico = new List<FinancieroProgramaticaCLS>();
             listProgramatico.Add(new FinancieroProgramaticaCLS
             {
-                id=1,
-                PNAP = 0,
-               Programa = 01,
-               Proyecto = 00,
-               Actividad = 0000,
-               EstProgControl = "00010000000",
-               Denominacion = "normas,Politicas y Administracion",
-               UnidadResponsable = "Consejo Municipal"
-
-            });
-            listProgramatico.Add(new FinancieroProgramaticaCLS
-            {
-                id=1,
+                id = 1,
                 PNAP = 0,
                 Programa = 01,
                 Proyecto = 00,
@@ -84,7 +72,19 @@ namespace CapaDatos
             });
             listProgramatico.Add(new FinancieroProgramaticaCLS
             {
-                id=2,
+                id = 1,
+                PNAP = 0,
+                Programa = 01,
+                Proyecto = 00,
+                Actividad = 0000,
+                EstProgControl = "00010000000",
+                Denominacion = "normas,Politicas y Administracion",
+                UnidadResponsable = "Consejo Municipal"
+
+            });
+            listProgramatico.Add(new FinancieroProgramaticaCLS
+            {
+                id = 2,
                 PNAP = 0,
                 Programa = 01,
                 Proyecto = 00,
@@ -96,7 +96,7 @@ namespace CapaDatos
             });
             listProgramatico.Add(new FinancieroProgramaticaCLS
             {
-                id=3,
+                id = 3,
                 PNAP = 0,
                 Programa = 11,
                 Proyecto = 00,
@@ -106,7 +106,7 @@ namespace CapaDatos
                 UnidadResponsable = "Despacho del Alcalde"
 
             });
-           
+
 
 
             return listProgramatico;
@@ -301,10 +301,10 @@ namespace CapaDatos
             List<FinancieroFuenteEspecificaCLS> ListaEspecificas = new List<FinancieroFuenteEspecificaCLS>();
             ListaEspecificas.Add(new FinancieroFuenteEspecificaCLS
             {
-                id=1,
-                codigo=0332,
-                fuente =60,
-                denominacion= "TERMOELECTRICA BARAHONA"
+                id = 1,
+                codigo = 0332,
+                fuente = 60,
+                denominacion = "TERMOELECTRICA BARAHONA"
 
 
             });
@@ -386,6 +386,69 @@ namespace CapaDatos
 
         }
 
+        public List<IngresosCLS> ListarIngresos()
+        {
+            List<IngresosCLS> ListaIngresos = new List<IngresosCLS>();
+        ListaIngresos.Add(new IngresosCLS
+            {
+                id=1,
+                Clasificador=1232,
+                Denominacion="Servicios Generales",
+                FuenteFinanciamiento="Fuentes Internas",
+                OrganismoFinancamiento="Organismo Internos",
+                Tipo="General",
+                AnoAnterior="2022",
+                Fecha="15/07/2022",
+                Estimado="100,000.00",
+                Formulado="200,000.00",
+                FuenteEspecifica="",
+                InstitucionOtorgante=""
+
+
+            });
+            return ListaIngresos;
+        }
+
+
+        public List<GastosCLS> ListarGastos()
+        {
+            List<GastosCLS> ListaGastos = new List<GastosCLS>();
+            ListaGastos.Add(new GastosCLS
+            {
+                id= 1,
+                Pnap ="00",
+                Programa = "01",
+                Proyecto = "000",
+                Obra = "0000",
+                Denominacion ="Normas, Politicas, administracion Municipal",
+                Funcion = "",
+                Control ="",
+                Tipo="Cabecera",
+                UnidadResponsable="",
+                Presupuesto="1,500,000.00"
+
+            });
+            return ListaGastos;
+        }
+
+
+
+        public List<ProyectoCLS> ListarProyecto()
+        {
+            List<ProyectoCLS> ListaProyecto = new List<ProyectoCLS>();
+            ListaProyecto.Add(new ProyectoCLS
+            {
+                id = 1,
+                Proyecto = "01- Construccion de Vias de Comunicacion y Amexos",
+                CodigoObra= "0051",
+                Descripcion = "Construccion de bandenes casco urbano",
+                FechaFin ="",
+                FechaIninio="",
+                Participacion = "No"
+
+            });
+            return ListaProyecto;
+        }
         //public List<UsuarioEntity> ListarUsuarios2()
         //{
         //    List<UsuarioEntity> listaUsuarios = null;
