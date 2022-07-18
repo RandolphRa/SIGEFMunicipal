@@ -208,6 +208,11 @@ body {
     background-position: center;
 }
 
+
+.cosa {
+    background-image: url("..//Resources//logo.png");
+}
+
 .caja-bg {
     background-image: url("..//Resources//CajaChica.png");
     background-repeat: no-repeat;

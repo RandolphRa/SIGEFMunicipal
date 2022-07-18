@@ -34,7 +34,7 @@ function listarTipoMedicamento() {
         /*Cabeceras Tabla*/
         cabeceras: ["Id", "Clasificador", "Fuente Especifica", "Organismo Financamiento", "Institucion Otorgante", "Tipo", "Año Anterior", "Fecha", "Estimado","Formulado"],
         /*Propiedades del servicio*/
-        propiedades: ["Id", "clasificador", "fuenteEspecifica", "organismoFinancamiento", "institucionOtorgante", "tipo", "anoAnterior", "fecha", "estimado", "formulado"],
+        propiedades: ["id", "clasificador", "fuenteEspecifica", "organismoFinancamiento", "institucionOtorgante", "tipo", "anoAnterior", "fecha", "estimado", "formulado"],
         editar: false,
         eliminar: false,
         propiedadId: "id",
