@@ -405,6 +405,22 @@ namespace CapaDatos
                 InstitucionOtorgante=""
 
 
+            });   ListaIngresos.Add(new IngresosCLS
+            {
+                id=1,
+                Clasificador=1231,
+                Denominacion="Servicios Generales",
+                FuenteFinanciamiento="Fuentes Internas",
+                OrganismoFinancamiento="Organismo Internos",
+                Tipo="General",
+                AnoAnterior="2022",
+                Fecha="15/07/2022",
+                Estimado="100,000.00",
+                Formulado="200,000.00",
+                FuenteEspecifica="",
+                InstitucionOtorgante=""
+
+
             });
             return ListaIngresos;
         }
