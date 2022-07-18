@@ -27,14 +27,14 @@ function filtrarTipoMedicamento() {
 
 
 function listarTipoMedicamento() {
-    objGlobalTipoMedicamento = {
+objGlobalTipoMedicamento = {
 
-        /*URL para listar data desde el controlador*/
+        //URL para listar data desde el controlador/
         url: "Financiero/ListarIngresos",
-        /*Cabeceras Tabla*/
-        cabeceras: ["Id", "Clasificador", "Fuente Especifica", "Organismo Financamiento", "Institucion Otorgante", "Tipo", "Año Anterior", "Fecha", "Estimado","Formulado"],
-        /*Propiedades del servicio*/
-        propiedades: ["id", "clasificador", "fuenteEspecifica", "organismoFinancamiento", "institucionOtorgante", "tipo", "anoAnterior", "fecha", "estimado", "formulado"],
+
+        cabeceras: ["Id", "Clasificador", "Fuente Financiamiento","Fuente Especifica","Organismo Financamiento", "Institucion Otorgante", "Tipo", "Año Anterior", "A la Fecha", "Estimado","Formulado"],
+        
+        propiedades: ["id", "clasificador","fuenteFinanciamiento", "fuenteEspecifica", "organismoFinancamiento", "institucionOtorgante", "tipo", "anoAnterior", "fecha", "estimado", "formulado"],
         editar: false,
         eliminar: false,
         propiedadId: "id",

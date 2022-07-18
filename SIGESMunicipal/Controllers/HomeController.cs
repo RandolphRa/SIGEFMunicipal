@@ -24,13 +24,13 @@ namespace SIGEFMunicipal.Controllers
 
         }
 
-        public List<FinancieroClasificadoresCLS> ListarUsuario()
-        {
-            //Consume la capa negocios
-            UsuarioNE obj = new UsuarioNE();
-            return obj.Listarusuarios();
+        //public List<FinancieroClasificadoresCLS> ListarUsuario()
+        //{
+        //    //Consume la capa negocios
+        //    UsuarioNE obj = new UsuarioNE();
+        //    return obj.Listarusuarios();
 
-        }
+        //}
 
         public IActionResult Privacy()
         {

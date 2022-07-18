@@ -25,13 +25,7 @@ function filtrarTipoMedicamento() {
     }
 }
 
-ID = 1,
-    CLASIFICADOR = 1234,
-    DESCRIPCION = "Descripcion algo",
-    CUENTA_CONTROL = 23123,
-    TIPO = "NORMAL",
-    CLASIFICACION = "UNA CLASIFICACION",
-    CTA_CONTABLE = 123123
+
 
 
 function listarTipoMedicamento() {
@@ -40,9 +34,9 @@ function listarTipoMedicamento() {
         /*URL para listar data desde el controlador*/
         url: "Financiero/ListarClasificadores",
         /*Cabeceras Tabla*/
-        cabeceras: ["id","Clasificador", "Descripcion", "Cuenta Control", "Tipo", "Clasificacion", "Cuenta Contable"],
+        cabeceras: ["Clasificador", "Descripcion", "Cuenta Control", "Tipo", "Clasificacion", "Cuenta Contable"],
         /*Propiedades del servicio*/
-        propiedades: ["id", "clasificador", "descripcion", "cuentA_CONTROL", "tipo", "clasificacion", "ctA_CONTABLE"],
+        propiedades: [ "clasificador", "descripcion", "cuentA_CONTROL", "tipo", "clasificacion", "ctA_CONTABLE"],
         editar: false,
         eliminar: false,
         propiedadId: "id",

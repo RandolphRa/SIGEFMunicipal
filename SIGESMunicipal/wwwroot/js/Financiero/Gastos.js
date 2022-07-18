@@ -32,9 +32,9 @@ function listarTipoMedicamento() {
         /*URL para listar data desde el controlador*/
         url: "Financiero/ListarGastos",
         /*Cabeceras Tabla*/
-        cabeceras: ["Id", "Pnap", "Programa", "Proyecto", "Obra", "Denominacion", "Funcion", "Control", "Tipo", "Unidad Responsable","Presupuesto"],
+        cabeceras: [ "Pnap", "Programa", "Proyecto", "Obra", "Denominacion", "Funcion", "Control", "Tipo", "Unidad Responsable","Presupuesto"],
         /*Propiedades del servicio*/
-        propiedades: ["id", "pnap", "programa", "proyecto", "obra", "denominacion", "funcion", "control", "tipo", "unidadResponsable", "presupuesto"],
+        propiedades: [ "pnap", "programa", "proyecto", "obra", "denominacion", "funcion", "control", "tipo", "unidadResponsable", "presupuesto"],
         editar: false,
         eliminar: false,
         propiedadId: "id",

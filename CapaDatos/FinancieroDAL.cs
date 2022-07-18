@@ -1,58 +1,104 @@
-﻿using CapaEntidad;
+﻿using System;
 using System.Collections.Generic;
+using System.Data;
+//SqlConnection
+using System.Data.SqlClient;
+using System.IO;
+using CapaEntidad;
+using Microsoft.Extensions.Configuration;
 
 namespace CapaDatos
 {
     public class FinancieroDAL : CadenaDAL
     {
 
+//        List<TipoMedicamentoCLS> lista = null;
+//            using (SqlConnection cn = new SqlConnection(cadena))
+//            {
+//                try
+//                {
+//                    cn.Open();
+//                    using (SqlCommand cmd = new SqlCommand("select iidtipomedicamento, descripcion, nombre" +
+//                        " from TipoMedicamento where BHABILITADO = 1 and nombre like '%"+ nombretipo + "%' ", cn))
+//                    {
+//                        cmd.CommandType = CommandType.Text;
+//                        SqlDataReader drd = cmd.ExecuteReader(CommandBehavior.SingleResult);
+//                        if (drd != null)
+//                        {
+//                            TipoMedicamentoCLS oTipoMedicamentoCLS;
+//    lista = new List<TipoMedicamentoCLS>();
+//                            int postId = drd.GetOrdinal("iidtipomedicamento");
+//    int postNombre = drd.GetOrdinal("nombre");
+//    int postDescripcion = drd.GetOrdinal("descripcion");
+//                            while (drd.Read())
+//                            {
+//                                oTipoMedicamentoCLS = new TipoMedicamentoCLS();
+//    oTipoMedicamentoCLS.idtipomedicamento = drd.IsDBNull(postId)? 0 : drd.GetInt32(postId);
+//                                oTipoMedicamentoCLS.nombre = drd.IsDBNull(postNombre)? "" : drd.GetString(postNombre);
+//                                oTipoMedicamentoCLS.descripcion = drd.IsDBNull(postDescripcion)? "" : drd.GetString(postDescripcion);
+//                                lista.Add(oTipoMedicamentoCLS);
+//                            }
+////Cerrar conexiòn
+//cn.Close();
+//                        }
+//                    }
+//                }
+//                catch (Exception ex)
+//{
+//    cn.Close();
+//    lista = null;
+//}
 
+
+
+//            }
         //Servicio que llena la data pasarle Entidad
         public List<FinancieroClasificadoresCLS> ListarClasificadores() {
             List<FinancieroClasificadoresCLS> listaUsuarios = new List<FinancieroClasificadoresCLS>();
-            listaUsuarios.Add(new FinancieroClasificadoresCLS
+            //List<TipoMedicamentoCLS> lista = null;
+            using (SqlConnection cn = new SqlConnection(cadena))
             {
-                ID = 1,
-                CLASIFICADOR = 11,
-                DESCRIPCION = "IMPUESTOS",
-                CUENTA_CONTROL = 11,
-                TIPO = "GENERAL",
-                CLASIFICACION = "INGRESOS",
-                CTA_CONTABLE = 345345345
-            });
-            listaUsuarios.Add(new FinancieroClasificadoresCLS
-            {
-                ID = 2,
-                CLASIFICADOR = 111,
-                DESCRIPCION = "IMPUESTOS SOBRE LOS INGRESOS",
-                CUENTA_CONTROL = 111,
-                TIPO = "GENERAL",
-                CLASIFICACION = "INGRESOS",
-                CTA_CONTABLE = 1565452323
-            });
-            listaUsuarios.Add(new FinancieroClasificadoresCLS
-            {
-                ID = 3,
-                CLASIFICADOR = 1111,
-                DESCRIPCION = "IMPUESTOS SOBRE EL PATRIMONIO",
-                CUENTA_CONTROL = 1111,
-                TIPO = "DETALLE",
-                CLASIFICACION = "INGRESOS",
-                CTA_CONTABLE = 1212523365
-            });
-            listaUsuarios.Add(new FinancieroClasificadoresCLS
-            {
-                ID = 4,
-                CLASIFICADOR = 111,
-                DESCRIPCION = "IMPUESTOS SOBRE LA PROPIEDAD",
-                CUENTA_CONTROL = 111,
-                TIPO = "DETALLE",
-                CLASIFICACION = "INGRESOS",
-                CTA_CONTABLE = 1212523365
-            });
+                try {
+                    cn.Open();
+                    using (SqlCommand cmd= new SqlCommand("select  top 10* from catalogo", cn))
+                    {
+                    cmd.CommandType = CommandType.Text;
+                        SqlDataReader drd = cmd.ExecuteReader(CommandBehavior.SingleResult);
+                        if(drd != null)
+                        {
+                            FinancieroClasificadoresCLS ofinancieroClasificadoresCLS;
+                            listaUsuarios =  new List<FinancieroClasificadoresCLS>();
+                            int postid = drd.GetOrdinal("Numero");
+                            int postnombre = drd.GetOrdinal("Nombre");
+                            int postorigen = drd.GetOrdinal("Origen");
+                            int posttipo = drd.GetOrdinal("Tipo");
+                            int postcontrol = drd.GetOrdinal("control");
+                            int postcuentA_CONTROl = drd.GetOrdinal("CTA_CONTAG");
+                            int postDETALLE = drd.GetOrdinal("DETALLE");
+                            while (drd.Read())
+                            {
+                                ofinancieroClasificadoresCLS = new FinancieroClasificadoresCLS();
+                                ofinancieroClasificadoresCLS.CLASIFICADOR = drd.IsDBNull(postid) ? "" : drd.GetString(postid);
+                                ofinancieroClasificadoresCLS.DESCRIPCION = drd.IsDBNull(postnombre) ? "" : drd.GetString(postnombre);
+                                ofinancieroClasificadoresCLS.CUENTA_CONTROL = drd.IsDBNull(postcontrol) ? "" : drd.GetString(postcontrol);
+                                ofinancieroClasificadoresCLS.TIPO = drd.IsDBNull(posttipo) ? "" : drd.GetString(posttipo);
+                               ofinancieroClasificadoresCLS.CLASIFICACION = drd.IsDBNull(postorigen) ? "" : drd.GetString(postorigen);
+                                ofinancieroClasificadoresCLS.CUENTA_CONTROL = drd.IsDBNull(postcuentA_CONTROl) ? "" : drd.GetString(postcuentA_CONTROl);
+                                ofinancieroClasificadoresCLS.CTA_CONTABLE = drd.IsDBNull(postDETALLE) ? "" : drd.GetString(postDETALLE);
+                                listaUsuarios.Add(ofinancieroClasificadoresCLS);
+                            }
+                            cn.Close();
 
+                        }
+                    }
+                }
+                catch(Exception ex) {
+                    cn.Close();
+                    listaUsuarios = null;
+                }
+            }
 
-            return listaUsuarios;
+                return listaUsuarios;
 
         }
         public List<FinancieroProgramaticaCLS> ListarEtsProgramatico()
@@ -389,20 +435,37 @@ namespace CapaDatos
         public List<IngresosCLS> ListarIngresos()
         {
             List<IngresosCLS> ListaIngresos = new List<IngresosCLS>();
-        ListaIngresos.Add(new IngresosCLS
+
+            ListaIngresos.Add(new IngresosCLS
             {
-                id=1,
-                Clasificador=1232,
-                Denominacion="Servicios Generales",
-                FuenteFinanciamiento="Fuentes Internas",
-                OrganismoFinancamiento="Organismo Internos",
-                Tipo="General",
-                AnoAnterior="2022",
-                Fecha="15/07/2022",
-                Estimado="100,000.00",
-                Formulado="200,000.00",
-                FuenteEspecifica="",
-                InstitucionOtorgante=""
+                id = 1,
+                Clasificador = 114333,
+                Denominacion = "Licencias de construcción",
+                FuenteFinanciamiento = "30",
+                FuenteEspecifica = "9996",
+                OrganismoFinancamiento = "102",
+                InstitucionOtorgante = "",
+                Tipo = "DETALLE",
+                AnoAnterior = "2,500,000.00",
+                Fecha = "1,177,820.00",
+                Estimado = "1905,465.45",
+                Formulado = "2,500,000.00"
+
+
+            }); ListaIngresos.Add(new IngresosCLS
+            {
+                id = 1,
+                Clasificador = 1232,
+                Denominacion = "Servicios Generales",
+                FuenteFinanciamiento = "Fuentes Internas",
+                OrganismoFinancamiento = "Organismo Internos",
+                Tipo = "General",
+                AnoAnterior = "200,000.00",
+                Fecha = "15/07/2022",
+                Estimado = "100,000.00",
+                Formulado = "200,000.00",
+                FuenteEspecifica = "",
+                InstitucionOtorgante = ""
 
 
             });
@@ -412,22 +475,62 @@ namespace CapaDatos
 
         public List<GastosCLS> ListarGastos()
         {
-            List<GastosCLS> ListaGastos = new List<GastosCLS>();
-            ListaGastos.Add(new GastosCLS
+            List<GastosCLS> ListaGastos = null;
+            using (SqlConnection cn = new SqlConnection(cadena))
             {
-                id= 1,
-                Pnap ="00",
-                Programa = "01",
-                Proyecto = "000",
-                Obra = "0000",
-                Denominacion ="Normas, Politicas, administracion Municipal",
-                Funcion = "",
-                Control ="",
-                Tipo="Cabecera",
-                UnidadResponsable="",
-                Presupuesto="1,500,000.00"
+                try
+                {
+                    cn.Open();
+                    using (SqlCommand cmd = new SqlCommand("select * from PRESUP_GASTO", cn))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        SqlDataReader drd = cmd.ExecuteReader(CommandBehavior.SingleResult);
+                        if (drd != null)
+                        {
+                            GastosCLS ogastosCLS;
+                            ListaGastos = new List<GastosCLS>();
+                            int postid = drd.GetOrdinal("NUMERO");
+                            int postPnap = drd.GetOrdinal("PNAP");
+                            int postPrograma = drd.GetOrdinal("PROGRAMA");
+                            int postProyecto = drd.GetOrdinal("PROYECTO");
+                            int postObra = drd.GetOrdinal("ACT_OBRA");
+                            int postDenominacion = drd.GetOrdinal("NOMBRE");
+                            int postFuncion = drd.GetOrdinal("FUNCION");
+                            int postControl = drd.GetOrdinal("CONTROL");
+                            int postTipo = drd.GetOrdinal("TIPO_GASTO");
+                            int postUnidadResponsable = drd.GetOrdinal("UNIDAD_RESP");
 
-            });
+                            int postPresupuesto = drd.GetOrdinal("VALOR_PRESUPUESTO");
+                            while (drd.Read())
+                            {
+                                ogastosCLS = new GastosCLS();
+                                ogastosCLS.numero = drd.IsDBNull(postid) ? "" : drd.GetString(postid);
+                                ogastosCLS.Pnap = drd.IsDBNull(postPnap) ? "" : drd.GetString(postPnap);
+                                ogastosCLS.Programa = drd.IsDBNull(postPrograma) ? "" : drd.GetString(postPrograma);
+                                ogastosCLS.Proyecto= drd.IsDBNull(postProyecto) ? "" : drd.GetString(postProyecto);
+                                ogastosCLS.Obra = drd.IsDBNull(postObra) ? "" : drd.GetString(postObra);
+                                ogastosCLS.Denominacion = drd.IsDBNull(postDenominacion) ? "" : drd.GetString(postDenominacion);
+                                ogastosCLS.Funcion = drd.IsDBNull(postFuncion) ? "" : drd.GetString(postFuncion);
+                                ogastosCLS.Control = drd.IsDBNull(postControl) ? "" : drd.GetString(postControl);
+                                ogastosCLS.Tipo = drd.IsDBNull(postTipo) ? "" : drd.GetString(postTipo);
+                                ogastosCLS.UnidadResponsable = drd.IsDBNull(postUnidadResponsable) ? "" : drd.GetString(postUnidadResponsable);
+                                ogastosCLS.Presupuesto = drd.IsDBNull(postPresupuesto) ? 0 : drd.GetDecimal(postPresupuesto) ;
+
+                                ListaGastos.Add(ogastosCLS);
+                            }
+                            }
+                            }
+                            cn.Close();
+
+                        
+                    
+                }
+                catch (Exception ex)
+                {
+                    cn.Close();
+                    ListaGastos = null;
+                }
+            }
             return ListaGastos;
         }
 

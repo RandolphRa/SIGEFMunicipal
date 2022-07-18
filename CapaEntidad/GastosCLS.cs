@@ -8,7 +8,7 @@ namespace CapaEntidad
 {
     public class GastosCLS
     {
-        public int id { get; set; }
+        public string numero { get; set; }
         public string Pnap { get; set; }
         public string Programa              { get; set; }
         public string Proyecto { get; set; }
@@ -18,7 +18,7 @@ namespace CapaEntidad
         public string Control { get; set; }
         public string Tipo    { get; set; }
         public string UnidadResponsable     { get; set; }
-        public string Presupuesto               { get; set; }
+        public decimal Presupuesto               { get; set; }
 
 
     }

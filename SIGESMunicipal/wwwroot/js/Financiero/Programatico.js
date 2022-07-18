@@ -30,23 +30,23 @@ function filtrarTipoMedicamento() {
 function listarTipoMedicamento() {
     objGlobalTipoMedicamento = {
 
-        /*URL para listar data desde el controlador*/
-        url: "Financiero/ListarProgramatico",
-        /*Cabeceras Tabla*/
-        cabeceras: ["id", "PNAP", "Programa", "Proyecto", "Actividad", "Act/Obra", "Denominacion","Unidad Responsable"],
-        /*Propiedades del servicio*/
-        propiedades: ["id", "pnap", "programa", "proyecto", "actividad", "estProgControl", "denominacion", "unidadResponsable"],
+        / URL para listar data desde el controlador /
+        url: "Financiero/ListarIngresos",
+            /Cabeceras Tabla/
+    cabeceras: ["Id", "Clasificador", "Fuente Financiamiento", "Fuente Especifica", "Organismo Financamiento", "Institucion Otorgante", "Tipo", "Año Anterior", "A la Fecha", "Estimado", "Formulado"],
+        /Propiedades del servicio/
+    propiedades: ["id", "clasificador", "fuenteFinanciamiento", "fuenteEspecifica", "organismoFinancamiento", "institucionOtorgante", "tipo", "anoAnterior", "fecha", "estimado", "formulado"],
         editar: false,
-        eliminar: false,
-        propiedadId: "id",
-        divPintado: "pruebaContenedor",
-        divContenedorTabla: "LaTabla",
-        idtabla:"tablaklk",
-        urleliminar: "TipoMedicamento/eliminarTipoMedicamento",
-        nombreparametroeliminar: "id",
-        titlePopup: "Formulario de Clasificadores Contables",
-        paginar: false
-    }
+            eliminar: false,
+                propiedadId: "id",
+                    divPintado: "pruebaContenedor",
+                        divContenedorTabla: "LaTabla",
+                            idtabla: "tablaklk",
+                                urleliminar: "TipoMedicamento/eliminarTipoMedicamento",
+                                    nombreparametroeliminar: "id",
+                                        titlePopup: "Presupuesto de ingresos",
+                                            paginar: false
+}
 
     bjFormularioMedicamento = {
         type: "popup",

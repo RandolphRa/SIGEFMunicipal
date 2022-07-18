@@ -11,10 +11,10 @@ namespace CapaNegocios
     public class UsuarioNE
     {
         //Servicio que consume la capa datos
-        public List<FinancieroClasificadoresCLS> Listarusuarios() { 
+        //public List<FinancieroClasificadoresCLS> Listarusuarios() { 
         
-            UsuarioDAT obj = new UsuarioDAT();
-            return obj.ListarUsuarios();
-        }
+        //    UsuarioDAT obj = new UsuarioDAT();
+        //    return obj.ListarUsuarios();
+        //}
     }
 }
