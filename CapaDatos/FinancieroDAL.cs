@@ -461,7 +461,7 @@ namespace CapaDatos
                 OrganismoFinancamiento = "Organismo Internos",
                 Tipo = "General",
                 AnoAnterior = "200,000.00",
-                Fecha = "15/07/2022",
+                Fecha = "100,000.00",
                 Estimado = "100,000.00",
                 Formulado = "200,000.00",
                 FuenteEspecifica = "",

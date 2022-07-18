@@ -913,6 +913,10 @@ function Cancelar(btn) {
     tdUltimo.setAttribute("data-botones", "");
 }
 
+function myFunction() {
+    window.open('..//Resources//FormulaciondeIngresos.pdf', '_blank', 'fullscreen=yes'); return false;
+} 
+
 function generarTabla(res, objConfiguracionEspecifico) {
     if (objConfiguracionEspecifico != undefined && objConfiguracionEspecifico.check == undefined) objConfiguracionEspecifico.check = false;
     var contenido = "";
@@ -980,7 +984,7 @@ function generarTabla(res, objConfiguracionEspecifico) {
         for (var j = 0; j < nombrepropiedades.length; j++) {
             propiedadActual = nombrepropiedades[j]
             if (typeEspecifico != "edit") {
-                contenido += "<td>" + obj[propiedadActual] + "</td>";
+                contenido += "<td onclick='myFunction()'>" + obj[propiedadActual] + "</td>";
             }
 
             else {
