@@ -59,7 +59,7 @@ function listarTipoMedicamento() {
             [
                 {
                     label: "Pnap",
-                    readonly: true,
+                    //readonly: true,
 
                     //nuevas
 

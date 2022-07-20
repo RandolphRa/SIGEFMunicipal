@@ -148,5 +148,55 @@ namespace
             return obj.ListarProyecto();
 
         }
+        public ComboCLS listarCombosClasificadores()
+        {
+            FinancieroBL obj = new FinancieroBL();
+            return obj.listarCombosClasificadores();
+        }
+        //ListarEntradaIngreso
+        public List<AnoFiscalCLS> ListarAnoFiscal()
+        {
+            FinancieroBL obj = new FinancieroBL();
+            return obj.listarAnoFiscal();
+
+        }
+        public List<EntradaIngresoCLS> ListarEntradaIngreso()
+        {
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarEntradaIngreso();
+
+        }
+        //ListarTiposRetenciones
+        public List<TiposRetencionesCLS> ListarTiposRetenciones()
+        {
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarTiposRetenciones();
+
+        }
+        //ListarGruposPago
+        public List<DestinoGastoCLS> ListarDestinoGasto()
+        {
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarDestinoGasto();
+
+        }
+        public List<GruposPagoCLS> ListarGruposPago()
+        {
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarGruposPago();
+
+        }
+        public List<BeneficiarioCLS> ListarBeneficiario()
+        {
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarBeneficiario();
+
+        }
+        public List<BeneficiariosGruposCLS> ListarBeneficiariosGrupos()
+        {
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarBeneficiariosGrupos();
+
+        }
     }
 }

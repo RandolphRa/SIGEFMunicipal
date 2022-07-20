@@ -1,59 +1,109 @@
-﻿using System;
+﻿using CapaEntidad;
+using System;
 using System.Collections.Generic;
-using System.Data;
-//SqlConnection
 using System.Data.SqlClient;
-using System.IO;
-using CapaEntidad;
-using Microsoft.Extensions.Configuration;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+
 
 namespace CapaDatos
 {
     public class FinancieroDAL : CadenaDAL
     {
 
-//        List<TipoMedicamentoCLS> lista = null;
-//            using (SqlConnection cn = new SqlConnection(cadena))
-//            {
-//                try
-//                {
-//                    cn.Open();
-//                    using (SqlCommand cmd = new SqlCommand("select iidtipomedicamento, descripcion, nombre" +
-//                        " from TipoMedicamento where BHABILITADO = 1 and nombre like '%"+ nombretipo + "%' ", cn))
-//                    {
-//                        cmd.CommandType = CommandType.Text;
-//                        SqlDataReader drd = cmd.ExecuteReader(CommandBehavior.SingleResult);
-//                        if (drd != null)
-//                        {
-//                            TipoMedicamentoCLS oTipoMedicamentoCLS;
-//    lista = new List<TipoMedicamentoCLS>();
-//                            int postId = drd.GetOrdinal("iidtipomedicamento");
-//    int postNombre = drd.GetOrdinal("nombre");
-//    int postDescripcion = drd.GetOrdinal("descripcion");
-//                            while (drd.Read())
-//                            {
-//                                oTipoMedicamentoCLS = new TipoMedicamentoCLS();
-//    oTipoMedicamentoCLS.idtipomedicamento = drd.IsDBNull(postId)? 0 : drd.GetInt32(postId);
-//                                oTipoMedicamentoCLS.nombre = drd.IsDBNull(postNombre)? "" : drd.GetString(postNombre);
-//                                oTipoMedicamentoCLS.descripcion = drd.IsDBNull(postDescripcion)? "" : drd.GetString(postDescripcion);
-//                                lista.Add(oTipoMedicamentoCLS);
-//                            }
-////Cerrar conexiòn
-//cn.Close();
-//                        }
-//                    }
-//                }
-//                catch (Exception ex)
-//{
-//    cn.Close();
-//    lista = null;
-//}
+        //        List<TipoMedicamentoCLS> lista = null;
+        //            using (SqlConnection cn = new SqlConnection(cadena))
+        //            {
+        //                try
+        //                {
+        //                    cn.Open();
+        //                    using (SqlCommand cmd = new SqlCommand("select iidtipomedicamento, descripcion, nombre" +
+        //                        " from TipoMedicamento where BHABILITADO = 1 and nombre like '%"+ nombretipo + "%' ", cn))
+        //                    {
+        //                        cmd.CommandType = CommandType.Text;
+        //                        SqlDataReader drd = cmd.ExecuteReader(CommandBehavior.SingleResult);
+        //                        if (drd != null)
+        //                        {
+        //                            TipoMedicamentoCLS oTipoMedicamentoCLS;
+        //    lista = new List<TipoMedicamentoCLS>();
+        //                            int postId = drd.GetOrdinal("iidtipomedicamento");
+        //    int postNombre = drd.GetOrdinal("nombre");
+        //    int postDescripcion = drd.GetOrdinal("descripcion");
+        //                            while (drd.Read())
+        //                            {
+        //                                oTipoMedicamentoCLS = new TipoMedicamentoCLS();
+        //    oTipoMedicamentoCLS.idtipomedicamento = drd.IsDBNull(postId)? 0 : drd.GetInt32(postId);
+        //                                oTipoMedicamentoCLS.nombre = drd.IsDBNull(postNombre)? "" : drd.GetString(postNombre);
+        //                                oTipoMedicamentoCLS.descripcion = drd.IsDBNull(postDescripcion)? "" : drd.GetString(postDescripcion);
+        //                                lista.Add(oTipoMedicamentoCLS);
+        //                            }
+        ////Cerrar conexiòn
+        //cn.Close();
+        //                        }
+        //                    }
+        //                }
+        //                catch (Exception ex)
+        //{
+        //    cn.Close();
+        //    lista = null;
+        //}
 
 
 
-//            }
+        //            }
         //Servicio que llena la data pasarle Entidad
-        public List<FinancieroClasificadoresCLS> ListarClasificadores() {
+        //listarCombosClasificadores
+        public ComboCLS listarCombosClasificadores()
+        {
+            ComboCLS  ocomboCLS = new ComboCLS();
+            using (SqlConnection cn = new SqlConnection(cadena))
+            {
+                try
+                {
+                    cn.Open();
+                    using (SqlCommand cmd = new SqlCommand("upslistarcomboscatalogo", cn))
+                    {
+                        //Le indico que es un procedure
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        SqlDataReader drd = cmd.ExecuteReader();
+                        if (drd != null)
+                        {
+                            List<FinancieroClasificadoresCLS> listaclasificadores = new List<FinancieroClasificadoresCLS>();
+                            int posId = drd.GetOrdinal("numero");
+                            int posNombre = drd.GetOrdinal("NOMBRE");
+
+                            FinancieroClasificadoresCLS ofinancieroClasificadoresCLS;
+                            while (drd.Read())
+                            {
+                                ofinancieroClasificadoresCLS = new FinancieroClasificadoresCLS();
+                                ofinancieroClasificadoresCLS.CLASIFICADOR = drd.IsDBNull(posId) ? "" : drd.GetString(posId);
+                                ofinancieroClasificadoresCLS.DESCRIPCION = drd.IsDBNull(posNombre) ? "" : drd.GetString(posNombre);
+
+                                listaclasificadores.Add(ofinancieroClasificadoresCLS);
+                            }
+                            //oMedicamentoComboCLS.listaclasificadores = listalaboratorio;
+                            ocomboCLS.listaclasificadores = listaclasificadores;
+                        }
+                        
+                        cn.Close();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    cn.Close();
+                    //null para mi es error
+                    ocomboCLS = null;
+                }
+            }
+
+                return ocomboCLS;
+        }
+
+            public List<FinancieroClasificadoresCLS> ListarClasificadores() {
             List<FinancieroClasificadoresCLS> listaUsuarios = new List<FinancieroClasificadoresCLS>();
             //List<TipoMedicamentoCLS> lista = null;
             using (SqlConnection cn = new SqlConnection(cadena))
@@ -434,41 +484,62 @@ namespace CapaDatos
 
         public List<IngresosCLS> ListarIngresos()
         {
-            List<IngresosCLS> ListaIngresos = new List<IngresosCLS>();
-
-            ListaIngresos.Add(new IngresosCLS
+            List<IngresosCLS> ListaIngresos = null;
+            using (SqlConnection cn = new SqlConnection(cadena))
             {
-                id = 1,
-                Clasificador = 114333,
-                Denominacion = "Licencias de construcción",
-                FuenteFinanciamiento = "30",
-                FuenteEspecifica = "9996",
-                OrganismoFinancamiento = "102",
-                InstitucionOtorgante = "",
-                Tipo = "DETALLE",
-                AnoAnterior = "2,500,000.00",
-                Fecha = "1,177,820.00",
-                Estimado = "1905,465.45",
-                Formulado = "2,500,000.00"
+                try
+                {
+                    cn.Open();
+                    using (SqlCommand cmd = new SqlCommand("select * from PRESUP_INGRESOS", cn))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        SqlDataReader drd = cmd.ExecuteReader(CommandBehavior.SingleResult);
+                        if (drd != null)
+                        {
+                            IngresosCLS oingresosCLS;
+                            ListaIngresos = new List<IngresosCLS>();
+                            int postClasificador = drd.GetOrdinal("CLASIFICADOR");
+                            int postFuenteFinanciamiento = drd.GetOrdinal("FTE_FINANCIAMIENTO");
+                            int postFuenteEspecifica = drd.GetOrdinal("FTE_ESPECIFICA");
+                            int postOrganismoFinancamiento = drd.GetOrdinal("ORG_FINANCIADOR");
+                            int postInstitucionOtorgante = drd.GetOrdinal("INST_OTORGANTE");
+                            int postDenominacion = drd.GetOrdinal("DETALLE");
+                            int postAnoAnterior = drd.GetOrdinal("PRESUP_ANTERIOR");
+                            //int postAnoAnterior = drd.GetOrdinal("CONTROL");
+                            int postEstimado = drd.GetOrdinal("ESTIMADO_ACTUAL");
+                            int postFormulado = drd.GetOrdinal("VALOR_PRESUPUESTO");
+
+                           // int postTipo = drd.GetOrdinal("VALOR_PRESUPUESTO");
+                            while (drd.Read())
+                            {
+                                oingresosCLS = new IngresosCLS();
+                                oingresosCLS.Clasificador = drd.IsDBNull(postClasificador) ? "" : drd.GetString(postClasificador);
+                                oingresosCLS.FuenteFinanciamiento = drd.IsDBNull(postFuenteFinanciamiento) ? "" : drd.GetString(postFuenteFinanciamiento);
+                                oingresosCLS.FuenteEspecifica = drd.IsDBNull(postFuenteEspecifica) ? "" : drd.GetString(postFuenteEspecifica);
+                                oingresosCLS.OrganismoFinancamiento = drd.IsDBNull(postOrganismoFinancamiento) ? "" : drd.GetString(postOrganismoFinancamiento);
+                                oingresosCLS.InstitucionOtorgante = drd.IsDBNull(postInstitucionOtorgante) ? "" : drd.GetString(postInstitucionOtorgante);
+                                oingresosCLS.Denominacion = drd.IsDBNull(postInstitucionOtorgante) ? "" : drd.GetString(postInstitucionOtorgante);
+                                oingresosCLS.Denominacion = drd.IsDBNull(postDenominacion) ? "" : drd.GetString(postDenominacion);
+                                oingresosCLS.AnoAnterior = drd.IsDBNull(postAnoAnterior) ? 0 : drd.GetDecimal(postAnoAnterior);
+                                oingresosCLS.Estimado = drd.IsDBNull(postEstimado) ? 0 : drd.GetDecimal(postEstimado);
+                                oingresosCLS.Formulado = drd.IsDBNull(postFormulado) ? 0 : drd.GetDecimal(postFormulado);
+                                //oingresosCLS.Presupuesto = drd.IsDBNull(postPresupuesto) ? 0 : drd.GetDecimal(postPresupuesto);
+
+                                ListaIngresos.Add(oingresosCLS);
+                            }
+                        }
+                    }
+                    cn.Close();
 
 
-            }); ListaIngresos.Add(new IngresosCLS
-            {
-                id = 1,
-                Clasificador = 1232,
-                Denominacion = "Servicios Generales",
-                FuenteFinanciamiento = "Fuentes Internas",
-                OrganismoFinancamiento = "Organismo Internos",
-                Tipo = "General",
-                AnoAnterior = "200,000.00",
-                Fecha = "100,000.00",
-                Estimado = "100,000.00",
-                Formulado = "200,000.00",
-                FuenteEspecifica = "",
-                InstitucionOtorgante = ""
 
-
-            });
+                }
+                catch (Exception ex)
+                {
+                    cn.Close();
+                    ListaIngresos = null;
+                }
+            }
             return ListaIngresos;
         }
 
@@ -586,5 +657,302 @@ namespace CapaDatos
         //    return null;
 
         //}
+        public List<AnoFiscalCLS> ListarAnoFiscal()
+        {
+            List<AnoFiscalCLS> ListaAno = new List<AnoFiscalCLS>();
+            ListaAno.Add(new AnoFiscalCLS
+            {
+                AnoFiscal= "01",
+                Desde="1/01/2022",
+                Hasta ="31/12/2022",
+                Estatus ="Actual"
+
+            });
+            ListaAno.Add(new AnoFiscalCLS
+            {
+                AnoFiscal = "02",
+                Desde = "1/01/2023",
+                Hasta = "31/12/2023",
+                Estatus = "ABIERTO"
+
+            });
+            return ListaAno;
+        }
+    
+
+    public List<EntradaIngresoCLS> ListarEntradaIngreso()
+    {
+        List<EntradaIngresoCLS> ListaEntradaIngreso = new List<EntradaIngresoCLS>();
+            ListaEntradaIngreso.Add(new EntradaIngresoCLS
+            {
+            Clasificaficador="151504",
+            Detalle= "LOCALES Y CASETAS A BUHONEROS",
+            DescResumida= "BUHONEROS"
+
+            });
+            ListaEntradaIngreso.Add(new EntradaIngresoCLS
+                {
+                Clasificaficador = "151314",
+                Detalle = "Inhamacion y echumacion",
+                DescResumida = "Inh/exhaumac"
+
+            });
+            ListaEntradaIngreso.Add(new EntradaIngresoCLS
+            {
+                Clasificaficador = "114333",
+                Detalle = "Licencias de construccion",
+                DescResumida = "Lic. Const"
+
+            });
+            ListaEntradaIngreso.Add(new EntradaIngresoCLS
+            {
+                Clasificaficador = "151516",
+                Detalle = "Matanzas y espendio de carnes",
+                DescResumida = "Matanza"
+
+            });
+            ListaEntradaIngreso.Add(new EntradaIngresoCLS
+            {
+                Clasificaficador = "142503",
+                Detalle = "Ordinaria segun la Ley",
+                DescResumida = "Ord. 40%"
+
+            });
+            return ListaEntradaIngreso;
     }
+        public List<TiposRetencionesCLS> ListarTiposRetenciones()
+        {
+            List<TiposRetencionesCLS> ListaTiposRetenciones = new List<TiposRetencionesCLS>();
+            ListaTiposRetenciones.Add(new TiposRetencionesCLS
+            {
+                Codigo = "1",
+                Detalle = "N/A",
+                TipoRetencion = "",
+                Operacion ="",
+                Valor = "",
+                Calculada = "",
+                ModoAfecta = "",
+                Beneficiario = ""
+            });
+            ListaTiposRetenciones.Add(new TiposRetencionesCLS
+            {
+                Codigo = "2",
+                Detalle = "Afp",
+                TipoRetencion = "Proceso",
+                Operacion = "N/A",
+                Valor = "",
+                Calculada = "",
+                ModoAfecta = "Restando",
+                Beneficiario = "Tesoreria de la seguridad social"
+
+            });
+            ListaTiposRetenciones.Add(new TiposRetencionesCLS
+            {
+                Codigo = "3",
+                Detalle = "Ars",
+                TipoRetencion = "Proceso",
+                Operacion = "N/A",
+                Valor = "",
+                Calculada = "",
+                ModoAfecta = "Restando",
+                Beneficiario = "Tesoreria de la seguridad social"
+
+            });
+            ListaTiposRetenciones.Add(new TiposRetencionesCLS
+            {
+                Codigo = "4",
+                Detalle = "Imp./Renta",
+                TipoRetencion = "Proceso",
+                Operacion = "Multiplicar",
+                Valor = "0.50",
+                Calculada = "S",
+                ModoAfecta = "Restando",
+                Beneficiario = "Direccion General de Imp. Internos"
+
+            });
+            ListaTiposRetenciones.Add(new TiposRetencionesCLS
+            {
+                Codigo = "5",
+                Detalle = "10% Alquileres",
+                TipoRetencion = "Proceso",
+                Operacion = "Multiplicar",
+                Valor = "10.00",
+                Calculada = "S",
+                ModoAfecta = "Restando",
+                Beneficiario = "Direccion General de Imp. Internos"
+
+            });
+            return ListaTiposRetenciones;
+        }
+        public List<DestinoGastoCLS> ListarDestinoGasto()
+        {
+            List<DestinoGastoCLS> ListaDestinoGasto = new List<DestinoGastoCLS>();
+            ListaDestinoGasto.Add(new DestinoGastoCLS
+            {
+                Codigo = "1",
+                DestinoGasto="INTERNET"
+               
+            });
+            ListaDestinoGasto.Add(new DestinoGastoCLS
+            {
+                Codigo = "2",
+                DestinoGasto = "Cta. por Pagar"
+
+
+            });
+            ListaDestinoGasto.Add(new DestinoGastoCLS
+            {
+                Codigo = "3",
+                DestinoGasto = "Nomina Cheque"
+
+            });
+            ListaDestinoGasto.Add(new DestinoGastoCLS
+            {
+                Codigo = "4",
+                DestinoGasto = "Nomina Banco"
+               
+
+            });
+            ListaDestinoGasto.Add(new DestinoGastoCLS
+            {
+                Codigo = "5",
+                DestinoGasto ="Tranferencias"
+                
+
+            });
+            return ListaDestinoGasto;
+        }
+        public List<GruposPagoCLS> ListarGruposPago()
+        {
+            List<GruposPagoCLS> ListaGruposPago = new List<GruposPagoCLS>();
+            ListaGruposPago.Add(new GruposPagoCLS
+            {
+                Codigo= "1",
+                Descripcion ="Combustible",
+                Estatus = "A",
+                FechaIni = "1/03/2022",
+                FechaFin = "",
+                UsuarioCrea ="Supervisor"
+
+            });
+            return ListaGruposPago;
+        }
+        public List<BeneficiarioCLS> ListarBeneficiario()
+        {
+            List<BeneficiarioCLS> ListaBeneficiario = new List<BeneficiarioCLS>();
+            ListaBeneficiario.Add(new BeneficiarioCLS
+            {
+                Codigo = "188",
+                Beneficiario="Alcide Rosado Rosado",
+                Cedula = "04800810808",
+                Tipo = "Empleado",
+                Contacto="Depto. RRHH",
+                Telefono = "",
+                Telefono1= ""
+                
+
+            });
+            ListaBeneficiario.Add(new BeneficiarioCLS
+            {
+                Codigo = "192",
+                Beneficiario = "ALEJANDRO DIAZ ARIAS",
+                Cedula = "4800425219",
+                Tipo = "Empleado",
+                Contacto = "Depto. RRHH",
+                Telefono = "",
+                Telefono1 = ""
+
+            });
+            ListaBeneficiario.Add(new BeneficiarioCLS
+            {
+                Codigo = "121",
+                Beneficiario = "ALEJANDRO DIAZ ARIAS",
+                Cedula = "04800425219",
+                Tipo = "Empleado",
+                Contacto = "Depto. RRHH",
+                Telefono = "",
+                Telefono1 = ""
+
+            });
+            ListaBeneficiario.Add(new BeneficiarioCLS
+            {
+                Codigo = "170",
+                Beneficiario = "ALEJANDRO ROQUE SERRADO",
+                Cedula = "08700107819",
+                Tipo = "Empleado",
+                Contacto = "Depto. RRHH",
+                Telefono = "",
+                Telefono1 = ""
+
+            });
+            ListaBeneficiario.Add(new BeneficiarioCLS
+            {
+                Codigo = "110",
+                Beneficiario = "ALEJO ABREU",
+                Cedula = "000000000000110",
+                Tipo = "Empleado",
+                Contacto = "Depto. RRHH",
+                Telefono = "",
+                Telefono1 = ""
+
+            });
+
+            return ListaBeneficiario;
+        }
+        public List<BeneficiariosGruposCLS> ListarBeneficiariosGrupos()
+        {
+            List<BeneficiariosGruposCLS> ListaBeneficiariosGrupos = new List<BeneficiariosGruposCLS>();
+            ListaBeneficiariosGrupos.Add(new BeneficiariosGruposCLS
+            {
+                Codigo = "110",
+                Beneficiario = "ALEJO ABREU",
+                Cedula = "04800550735",
+                GrupoPago = "Combustible",
+                Cargo = "Director Contabilidad",
+                Valor = "1,500.00",
+                
+
+
+            });
+
+
+            return ListaBeneficiariosGrupos;
+        }
+    }
+   
+    //public List<UsuarioEntity> ListarUsuarios2()
+    //{
+    //    List<UsuarioEntity> listaUsuarios = null;
+
+    //    using (SqlConnection cn = new SqlConnection(cadena))
+    //    {
+    //        try
+    //        {
+    //            cn.Open();
+    //            using (SqlCommand cmd = new SqlCommand("Select * from prueba",cn)) {
+    //                cmd.CommandType = CommandType.Text;
+    //                SqlDataReader drd = cmd.ExecuteReader();
+    //                if (drd != null) {
+    //                    UsuarioEntity oUsuarioEntity;
+    //                    while (drd.Read()) {
+    //                        oUsuarioEntity = new UsuarioEntity();
+    //                        oUsuarioEntity.ID = drd.GetInt32(0);
+    //                        oUsuarioEntity.Name = drd.GetString(1);
+    //                        listaUsuarios.Add(oUsuarioEntity);
+    //                    }
+    //                    cn.Close();
+    //                }
+    //            }
+    //        }
+    //        catch(Exception ex)
+    //        { 
+    //            cn.Close();
+    //            listaUsuarios = null;
+    //        }
+    //    }
+
+    //    return null;
+
+    //}
 }
+

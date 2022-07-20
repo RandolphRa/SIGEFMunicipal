@@ -1,6 +1,6 @@
 ﻿window.onload = function () {
     listarTipoMedicamento();
-/*    listarTipoMedicamento2();*/
+    /*    listarTipoMedicamento2();*/
 }
 
 
@@ -30,23 +30,23 @@ function filtrarTipoMedicamento() {
 function listarTipoMedicamento() {
     objGlobalTipoMedicamento = {
 
-        / URL para listar data desde el controlador /
-        url: "Financiero/ListarIngresos",
-            /Cabeceras Tabla/
-    cabeceras: ["Id", "Clasificador", "Fuente Financiamiento", "Fuente Especifica", "Organismo Financamiento", "Institucion Otorgante", "Tipo", "Año Anterior", "A la Fecha", "Estimado", "Formulado"],
-        /Propiedades del servicio/
-    propiedades: ["id", "clasificador", "fuenteFinanciamiento", "fuenteEspecifica", "organismoFinancamiento", "institucionOtorgante", "tipo", "anoAnterior", "fecha", "estimado", "formulado"],
+        /*URL para listar data desde el controlador*/
+        url: "Financiero/ListarProgramatico",
+        /*Cabeceras Tabla*/
+        cabeceras: ["id", "PNAP", "Programa", "Proyecto", "Actividad", "Act/Obra", "Denominacion", "Unidad Responsable"],
+        /*Propiedades del servicio*/
+        propiedades: ["id", "pnap", "programa", "proyecto", "actividad", "estProgControl", "denominacion", "unidadResponsable"],
         editar: false,
-            eliminar: false,
-                propiedadId: "id",
-                    divPintado: "pruebaContenedor",
-                        divContenedorTabla: "LaTabla",
-                            idtabla: "tablaklk",
-                                urleliminar: "TipoMedicamento/eliminarTipoMedicamento",
-                                    nombreparametroeliminar: "id",
-                                        titlePopup: "Presupuesto de ingresos",
-                                            paginar: false
-}
+        eliminar: false,
+        propiedadId: "id",
+        divPintado: "pruebaContenedor",
+        divContenedorTabla: "LaTabla",
+        idtabla: "tablaklk",
+        urleliminar: "TipoMedicamento/eliminarTipoMedicamento",
+        nombreparametroeliminar: "id",
+        titlePopup: "Formulario de Clasificadores Contables",
+        paginar: false
+    }
 
     bjFormularioMedicamento = {
         type: "popup",
@@ -55,22 +55,22 @@ function listarTipoMedicamento() {
         urlguardar: "Medicamento/guardarMedicamento",
         urlrecuperar: "Medicamento/recuperarMedicamento",
         parametrorecuperar: "iidmedicamento",
-        
+
         formulario: [
-           
-            
+
+
             [
                 {
                     //div
                     class: "col-md-6",
                     label: "CODIGO:",
                     name: "iidtipomedicamento",
-                    
+
                     data: "hola",
                     id: "cboTipoMedicamentoFormulario",
                     propiedadmostrar: "nombre",
                     valuemostrar: "idtipomedicamento"
-                    
+
                 },
                 {
                     label: "PNAP:",
@@ -82,7 +82,7 @@ function listarTipoMedicamento() {
                     label: "Programa:",
 
                     class: "col-md-6",
-                    
+
                     valuemostrar: "iidlaboratorio"
                 },
                 {
@@ -124,7 +124,7 @@ function listarTipoMedicamento() {
                     class: "col-md-6",
                     name: "contenido"
                 },
-                 {
+                {
                     label: "Funcion:",
 
                     class: "col-md-6",
@@ -139,7 +139,7 @@ function listarTipoMedicamento() {
                     name: "contenido"
                 }
             ],
-             [
+            [
                 {
                     label: "Modalidad del Contracto:",
                     readonly: true,
@@ -180,21 +180,21 @@ function listarTipoMedicamento() {
                     name: "Descripcion"
 
                 },
-                 {
+                {
                     //div
                     class: "col-md-4",
                     label: "Cuenta control",
                     name: "Descripcion"
 
                 },
-                  {
+                {
                     //div
                     class: "col-md-4",
                     label: "Tipo",
                     name: "Descripcion"
 
                 },
-                   {
+                {
                     //div
                     class: "col-md-4",
                     label: "Cuenta control",

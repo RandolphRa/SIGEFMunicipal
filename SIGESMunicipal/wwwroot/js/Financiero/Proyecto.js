@@ -56,19 +56,19 @@ function listarTipoMedicamento() {
         parametrorecuperar: "iidmedicamento",
 
         formulario: [
-            [
-                {
-                    label: "Proyecto",
-                    readonly: true,
+            //[
+            //    {
+            //        label: "Proyecto",
+            //        readonly: true,
 
-                    //nuevas
+            //        //nuevas
 
 
-                    //
-                    class: "col-md-6",
-                    name: "iidmedicamento"
-                },
-            ],
+            //        //
+            //        class: "col-md-6",
+            //        name: "iidmedicamento"
+            //    },
+            //],
 
             [
                 

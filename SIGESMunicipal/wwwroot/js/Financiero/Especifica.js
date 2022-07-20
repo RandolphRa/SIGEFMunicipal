@@ -14,8 +14,7 @@ function filtrarTipoMedicamento() {
     if (nombre == "") {
         listarTipoMedicamento();
     } else {
-        //objGlobalTipoMedicamento.url = "TipoMedicamento/filtrarTipoMedicamento/?nombretipo=" + nombre
-        //pintar(objGlobalTipoMedicamento);
+       
         var urlBuscar = "TipoMedicamento/filtrarTipoMedicamento/?nombretipo=" + nombre
         fetchGet(urlBuscar, "json", function (res) {
             document.getElementById(objGlobalTipoMedicamento.divContenedorTabla).innerHTML = generarTabla(res);
@@ -30,11 +29,11 @@ function filtrarTipoMedicamento() {
 function listarTipoMedicamento() {
     objGlobalTipoMedicamento = {
 
-        /*URL para listar data desde el controlador*/
+ 
         url: "Financiero/ListarFuentesEsp",
-        /*Cabeceras Tabla*/
+       
         cabeceras: ["Id", "Codigo", "Fuente", "Denominacion"],
-        /*Propiedades del servicio*/
+       
         propiedades: ["id", "codigo", "fuente", "denominacion"],
         editar: false,
         eliminar: false,
@@ -61,7 +60,7 @@ function listarTipoMedicamento() {
             
             [
                 {
-                    //div
+                    
                     class: "col-md-6",
                     label: "CODIGO:",
                     name: "iidtipomedicamento",

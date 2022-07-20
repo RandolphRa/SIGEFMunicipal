@@ -72,5 +72,65 @@ namespace CapaNegocios
             FinancieroDAL obj = new FinancieroDAL();
             return obj.ListarProyecto();
         }
+        public ComboCLS listarCombosClasificadores()
+        {
+           FinancieroDAL obj = new FinancieroDAL();
+            return obj.listarCombosClasificadores();
+            
+            //return obj  
+        }
+
+
+        public List<AnoFiscalCLS> listarAnoFiscal()
+        {
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarAnoFiscal();
+
+            //return obj  
+        }
+        public List<EntradaIngresoCLS> ListarEntradaIngreso()
+        {
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarEntradaIngreso();
+
+            //return obj  
+        }
+        public List<TiposRetencionesCLS> ListarTiposRetenciones()
+        {
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarTiposRetenciones();
+
+            //return obj  
+        }
+        public List<DestinoGastoCLS> ListarDestinoGasto()
+        {
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarDestinoGasto();
+
+            //return obj  
+        }
+        public List<GruposPagoCLS> ListarGruposPago()
+        {
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarGruposPago();
+
+            //return obj  
+        }
+        public List<BeneficiarioCLS> ListarBeneficiario()
+        {
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarBeneficiario();
+
+            //return obj  
+        }
+        public List<BeneficiariosGruposCLS> ListarBeneficiariosGrupos()
+        {
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarBeneficiariosGrupos();
+
+            //return obj  
+        }
+        //ListarGruposPago
     }
+
 }

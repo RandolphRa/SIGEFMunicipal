@@ -32,9 +32,9 @@ objGlobalTipoMedicamento = {
         //URL para listar data desde el controlador/
         url: "Financiero/ListarIngresos",
 
-        cabeceras: ["Id", "Clasificador", "Fuente Financiamiento","Fuente Especifica","Organismo Financamiento", "Institucion Otorgante", "Tipo", "Año Anterior", "A la Fecha", "Estimado","Formulado"],
+        cabeceras: [ "Clasificador", "Fuente Financiamiento","Fuente Especifica","Organismo Financamiento", "Institucion Otorgante",  "Año Anterior",  "Estimado","Formulado"],
         
-        propiedades: ["id", "clasificador","fuenteFinanciamiento", "fuenteEspecifica", "organismoFinancamiento", "institucionOtorgante", "tipo", "anoAnterior", "fecha", "estimado", "formulado"],
+        propiedades: [ "clasificador","fuenteFinanciamiento", "fuenteEspecifica", "organismoFinancamiento", "institucionOtorgante",  "anoAnterior",  "estimado", "formulado"],
         editar: false,
         eliminar: false,
         propiedadId: "id",
@@ -59,7 +59,7 @@ objGlobalTipoMedicamento = {
             [
                 {
                     label: "Clasificador",
-                    readonly: true,
+                    //readonly: false,
 
                     //nuevas
 
@@ -159,7 +159,7 @@ objGlobalTipoMedicamento = {
                 {
                     //div
                     class: "col-md-2",
-                    label: "clasificador",
+                    label: "Clasificador",
                     name: "Codigo"
 
                 },
