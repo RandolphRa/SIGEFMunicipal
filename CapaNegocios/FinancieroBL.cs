@@ -130,6 +130,20 @@ namespace CapaNegocios
 
             //return obj  
         }
+        public List<ComprobantesIngresosCLS> ListarComprobantesIngresos()
+        {
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarComprobantesIngresos();
+
+            //return obj  
+        }
+        public List<ComprobantesGastosCLS> ListarComprobantesGastos()
+        {
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarComprobantesGastos();
+
+            //return obj  
+        }
         //ListarGruposPago
     }
 

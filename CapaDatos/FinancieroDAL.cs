@@ -918,6 +918,132 @@ namespace CapaDatos
 
             return ListaBeneficiariosGrupos;
         }
+        public List<ComprobantesIngresosCLS> ListarComprobantesIngresos()
+        {
+            List<ComprobantesIngresosCLS> ListaComprobantesIngresos = new List<ComprobantesIngresosCLS>();
+            ListaComprobantesIngresos.Add(new ComprobantesIngresosCLS
+            {
+                Comprobante = "2000001",
+                Fecha = "05/05/2022",
+                Etapa="Ingreso",
+                Recibo = "2000001",
+                Contribuyente = "Liga Municipal Dominicana",
+                Detalle = "Resumen De Ingresos 05/05/2022",
+                Valor = "16,000.00",
+            });
+            ListaComprobantesIngresos.Add(new ComprobantesIngresosCLS
+            {
+                Comprobante = "200002",
+                Fecha = "09/05/2022",
+                Etapa = "Ingreso",
+                Recibo = "2000002",
+                Contribuyente = "Liga Municipal Dominicana",
+                Detalle = "Resumen De Ingresos 09/05/2022",
+                Valor = "70.00",
+            });
+            ListaComprobantesIngresos.Add(new ComprobantesIngresosCLS
+            {
+                Comprobante = "2100001",
+                Fecha = "12/01/2022",
+                Etapa = "Ingreso",
+                Recibo = "2100001",
+                Contribuyente = "Catalina Peña",
+                Detalle = "Recoleccion de desechos Solidos",
+                Valor = "500.00",
+            });
+            ListaComprobantesIngresos.Add(new ComprobantesIngresosCLS
+            {
+                Comprobante = "2100002",
+                Fecha = "18/01/2022",
+                Etapa = "Ingreso",
+                Recibo = "2100002",
+                Contribuyente = "Brenda Espinal",
+                Detalle = "Recogida de desechos solidas",
+                Valor = "1,000.00",
+            });
+            ListaComprobantesIngresos.Add(new ComprobantesIngresosCLS
+            {
+                Comprobante = "2100003",
+                Fecha = "22/01/2022",
+                Etapa = "Ingreso",
+                Recibo = "2100003",
+                Contribuyente = "Grupo super alba",
+                Detalle = "Recogida de desechos solidas",
+                Valor = "5,000.00",
+            });
+            return ListaComprobantesIngresos;
+        }
+        public List<ComprobantesGastosCLS> ListarComprobantesGastos()
+        {
+            List<ComprobantesGastosCLS> ListaComprobantesGastos = new List<ComprobantesGastosCLS>();
+            ListaComprobantesGastos.Add(new ComprobantesGastosCLS
+            {
+                Comprobante = "2000001",
+                Fecha = "05/04/2022",
+                Etapa = "Devengado",
+                Pago = "Cheque",
+                Beneficiario = "Angela Guillermina Aquino",
+                Cuenta = "01 Cuenta General",
+                Bruto= "250,000.00",
+                Retencion = "",
+                Valor = "250,000.00",
+                No = ""
+
+            });
+            ListaComprobantesGastos.Add(new ComprobantesGastosCLS
+            {
+                Comprobante = "2000002",
+                Fecha = "31/01/2022",
+                Etapa = "Devengado",
+                Pago = "Cheque",
+                Beneficiario = "Ayuntamiento municipal de villa",
+                Cuenta = "01 Cuenta General",
+                Bruto = "11,540,657.27",
+                Retencion = "",
+                Valor = "11,540,657.2",
+                No = ""
+            });
+            ListaComprobantesGastos.Add(new ComprobantesGastosCLS
+            {
+                Comprobante = "2000003",
+                Fecha = "31/01/2022",
+                Etapa = "Pagado",
+                Pago = "Cheque",
+                Beneficiario = "Ayuntamiento municipal de villa",
+                Cuenta = "01 Cuenta General",
+                Bruto = "11,540,657.27",
+                Retencion = "",
+                Valor = "11,540,657.2",
+                No = ""
+            });
+            ListaComprobantesGastos.Add(new ComprobantesGastosCLS
+            {
+                Comprobante = "2000002",
+                Fecha = "31/01/2022",
+                Etapa = "Devengado",
+                Pago = "Transferencia",
+                Beneficiario = "Charles Rafael Tavarez Arias",
+                Cuenta = "01 Cuenta General",
+                Bruto = "707,000.00",
+                Retencion = "",
+                Valor = "707,000.00",
+                No = ""
+            });
+            ListaComprobantesGastos.Add(new ComprobantesGastosCLS
+            {
+                Comprobante = "2000002",
+                Fecha = "31/01/2022",
+                Etapa = "Devengado",
+                Pago = "Transferencia",
+                Beneficiario = "Charles Rafael Tavarez Arias",
+                Cuenta = "01 Cuenta General",
+                Bruto = "707,000.00",
+                Retencion = "30,932.81",
+                Valor = "676,067.19",
+                No = "Cks. Nomina"
+            });
+            return ListaComprobantesGastos;
+        }
     }
    
     //public List<UsuarioEntity> ListarUsuarios2()

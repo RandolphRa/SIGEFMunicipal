@@ -198,5 +198,17 @@ namespace
             return obj.ListarBeneficiariosGrupos();
 
         }
+        public List<ComprobantesIngresosCLS> ListarComprobantesIngresos()
+        {
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarComprobantesIngresos();
+
+        }
+        public List<ComprobantesGastosCLS> ListarComprobantesGastos()
+        {
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarComprobantesGastos();
+
+        }
     }
 }
