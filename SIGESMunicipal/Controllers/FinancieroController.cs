@@ -210,5 +210,46 @@ namespace
             return obj.ListarComprobantesGastos();
 
         }
+        public List<CategoriaCLS> ListarCategoria()
+        {
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarCategoria();
+
+        }
+        public List<AreasCLS> ListarAreas()
+        {
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarAreas();
+
+        }
+        public List<MarcasCLS> ListarMarcas()
+        {
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarMarcas();
+
+        }
+        public List<ClasificadorGastoCLS> ListarClasificadorGasto()
+        {
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarClasificadorGasto();
+
+        }
+        public List<GrupoProgramasCLS> ListarGrupoProgramas()
+        {
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarGrupoProgramas();
+
+        }
+        public List<ProgramasCLS> ListarProgramas()
+        {
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarProgramas();
+        }
+        public List<DepartamentoCLS> ListarDepartamento()
+        {
+            FinancieroBL obj = new FinancieroBL();
+            return obj.ListarDepartamento();
+        }
     }
 }
+       

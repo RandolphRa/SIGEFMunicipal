@@ -144,7 +144,57 @@ namespace CapaNegocios
 
             //return obj  
         }
-        //ListarGruposPago
+        public List<CategoriaCLS> ListarCategoria()
+        {
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarCategoria();
+
+            //return obj  
+        }
+        public List<AreasCLS> ListarAreas()
+        {
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarAreas();
+
+            //return obj  
+        }
+        public List<MarcasCLS> ListarMarcas()
+        {
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarMarcas();
+
+            //return obj  
+        }
+        public List<ClasificadorGastoCLS> ListarClasificadorGasto()
+        {
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarClasificadorGasto();
+
+            //return obj  
+        }
+        public List<GrupoProgramasCLS> ListarGrupoProgramas()
+        {
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarGrupoProgramas();
+
+            //return obj  
+        }
+        public List<ProgramasCLS> ListarProgramas()
+        {
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarProgramas();
+
+            //return obj  
+        }
+
+        public List<DepartamentoCLS> ListarDepartamento()
+        {
+            FinancieroDAL obj = new FinancieroDAL();
+            return obj.ListarDepartamento();
+
+            //return obj  
+        }
+        //ListarClasificadorGasto
     }
 
 }

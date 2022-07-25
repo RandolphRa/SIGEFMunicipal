@@ -404,7 +404,6 @@ namespace CapaDatos
 
 
             });
-
             ListaEspecificas.Add(new FinancieroFuenteEspecificaCLS
             {
                 id = 1,
@@ -1043,6 +1042,232 @@ namespace CapaDatos
                 No = "Cks. Nomina"
             });
             return ListaComprobantesGastos;
+        }
+                public List<CategoriaCLS> ListarCategoria()
+        {
+            List<CategoriaCLS> ListaCategoria = new List<CategoriaCLS>();
+            ListaCategoria.Add(new CategoriaCLS
+            {
+                codigo= "1",
+                Descripcion = "Edificios y Oficinas",
+                CuentaGasto = "1",
+                Acumulado = "1"
+
+            });
+            ListaCategoria.Add(new CategoriaCLS
+            {
+                codigo= "2",
+                Descripcion = "Terrenos",
+                CuentaGasto = "1",
+                Acumulado = "1"
+
+            });
+            ListaCategoria.Add(new CategoriaCLS
+            {
+                codigo= "3",
+                Descripcion = "Infraestructura",
+                CuentaGasto = "1",
+                Acumulado = "1"
+
+            });
+            ListaCategoria.Add(new CategoriaCLS
+            {
+                codigo= "4",
+                Descripcion = "Vehiculo Livianos",
+                CuentaGasto = "1",
+                Acumulado = "1",
+                Corte="160,847.18",
+                Monto="160,847.18",
+                Despreciable ="S"
+
+            });
+            ListaCategoria.Add(new CategoriaCLS
+            {
+                codigo= "5",
+                Descripcion = "Vehiculo de Transporte",
+                CuentaGasto = "1",
+                Acumulado = "1",
+                Corte="80,596.32",
+                Monto="80,596.32",
+                Despreciable ="S"
+
+            });
+            return ListaCategoria;
+        }
+                public List<AreasCLS> ListarAreas()
+        {
+            List<AreasCLS> ListaAreas = new List<AreasCLS>();
+            ListaAreas.Add(new AreasCLS
+            {
+                Codigo = "1",
+                Descripcion ="Activo Fijo"
+            });
+            ListaAreas.Add(new AreasCLS
+            {
+                Codigo = "2",
+                Descripcion ="Aduanas y Exoneraciones"
+            });
+            ListaAreas.Add(new AreasCLS
+            {
+                Codigo = "3",
+                Descripcion ="Almacen"
+            });
+            ListaAreas.Add(new AreasCLS
+            {
+                Codigo = "4",
+                Descripcion ="Archivo y Correpondencia"
+            });
+            ListaAreas.Add(new AreasCLS
+            {
+                Codigo = "5",
+                Descripcion ="Asesoria de Construcciones Mun"
+            });
+            return ListaAreas;
+        }
+        public List<MarcasCLS> ListarMarcas()
+        {
+            List<MarcasCLS> ListaMarcas = new List<MarcasCLS>();
+            ListaMarcas.Add(new MarcasCLS
+            {
+                codigo = "1",
+                Marca= "N/A"
+            });
+            return ListaMarcas;
+        }
+        public List<ClasificadorGastoCLS> ListarClasificadorGasto()
+        {
+            List<ClasificadorGastoCLS> ListaClasificadorGasto = new List<ClasificadorGastoCLS>();
+            ListaClasificadorGasto.Add(new ClasificadorGastoCLS
+            {
+                Codigo ="2114",
+                Denominacion = "Regalalia Pascual"
+            });
+            ListaClasificadorGasto.Add(new ClasificadorGastoCLS
+            {
+                Codigo = "211101",
+                Denominacion = "Sueldo Fijos"
+            });
+            ListaClasificadorGasto.Add(new ClasificadorGastoCLS
+            {
+                Codigo = "211201",
+                Denominacion = "Sueldos Personal Contracto y/o Igualados"
+            });
+            ListaClasificadorGasto.Add(new ClasificadorGastoCLS
+            {
+                Codigo = "211202",
+                Denominacion = "Sueldos Personal Nominal"
+            });
+            ListaClasificadorGasto.Add(new ClasificadorGastoCLS
+            {
+                Codigo = "211204",
+                Denominacion = "Sueldos por  Serv. Especiales"
+            });
+            return ListaClasificadorGasto;
+        }
+        public List<GrupoProgramasCLS> ListarGrupoProgramas()
+        {
+            List<GrupoProgramasCLS> ListaGrupoProgramas = new List<GrupoProgramasCLS>();
+            ListaGrupoProgramas.Add(new GrupoProgramasCLS
+            {
+                Codigo = "01",
+                Descripcion = "Personal Fijo"
+            });
+            ListaGrupoProgramas.Add(new GrupoProgramasCLS
+            {
+                Codigo = "02",
+                Descripcion = "Contratados"
+            });
+            ListaGrupoProgramas.Add(new GrupoProgramasCLS
+            {
+                Codigo = "03",
+                Descripcion = "Proceso De Pension"
+            });
+            return ListaGrupoProgramas;
+        }
+        public List<ProgramasCLS> ListarProgramas()
+        {
+            List<ProgramasCLS> ListaProgramas = new List<ProgramasCLS>();
+            ListaProgramas.Add(new ProgramasCLS
+            {
+                Codigo = "01",
+                Programa = "1-COMITE EJECUTIVO",
+                EstructuraProgram= "00010000003",
+                Activo="S"
+            });
+            ListaProgramas.Add(new ProgramasCLS
+            {
+                Codigo = "02",
+                Programa = "2-SECRETARIA GENERAL",
+                EstructuraProgram = "00010000003",
+                Activo = "S"
+            });
+            ListaProgramas.Add(new ProgramasCLS
+            {
+                Codigo = "03",
+                Programa = "3-DIRECCION JURIDICA",
+                EstructuraProgram = "00010000003",
+                Activo = "S"
+            });
+            ListaProgramas.Add(new ProgramasCLS
+            {
+                Codigo = "03",
+                Programa = "4-DIRECCION DE COMUNICACIONES",
+                EstructuraProgram = "00010000003",
+                Activo = "S"
+            });
+            ListaProgramas.Add(new ProgramasCLS
+            {
+                Codigo = "03",
+                Programa = "5-SUB-SEC. DE PLAN Y DES. INSTITUCIONAL",
+                EstructuraProgram = "00010000003",
+                Activo = "S"
+            });
+            return ListaProgramas;
+        }
+        public List<DepartamentoCLS> ListarDepartamento()
+        {
+            List<DepartamentoCLS> ListaMarcas = new List<DepartamentoCLS>();
+            ListaMarcas.Add(new DepartamentoCLS
+            {
+                Codigo= "1",
+                Departamento ="1-Comite Ejecutico",
+                Programa = "1-Comite Ejecutico",
+                GrupoNomina = "",
+                EstructuraProg = "00010000003",
+            });
+            ListaMarcas.Add(new DepartamentoCLS
+            {
+                Codigo = "2",
+                Departamento = "2-Secretaria General",
+                Programa = "2-Secretaria General",
+                GrupoNomina = "",
+                EstructuraProg = "00010000003",
+            });
+            ListaMarcas.Add(new DepartamentoCLS
+            {
+                Codigo = "3",
+                Departamento = "3-Direccion Juridica",
+                Programa = "3-Direccion Juridica",
+                GrupoNomina = "",
+                EstructuraProg = "00010000003",
+            });
+            ListaMarcas.Add(new DepartamentoCLS
+            {
+                Codigo = "4",
+                Departamento = "4-Direccion De Comunicaciones",
+                Programa = "4-Direccion De Comunicaciones",
+                GrupoNomina = "",
+                EstructuraProg = "00010000003",
+            });
+            ListaMarcas.Add(new DepartamentoCLS
+            {
+                Codigo = "5",
+                Departamento = "5-Sub-Sec. De La Relaciones Int.",
+                Programa = "5-Sub-Sec. De La Relaciones Int.",
+                GrupoNomina = "",
+                EstructuraProg = "00010000003",
+            });
+            return ListaMarcas;
         }
     }
    
