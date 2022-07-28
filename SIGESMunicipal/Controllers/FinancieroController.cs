@@ -2,7 +2,7 @@
 using CapaNegocios;
 using Microsoft.AspNetCore.Mvc;
 
-namespace 
+namespace
     Municipal.Controllers
 {
     public class FinancieroController : Controller
@@ -109,13 +109,13 @@ namespace
             return obj.ListarCatalogoFunciones();
         }
 
-        
+
         public List<FinancieroCatalogoOrganismosFinanciadoresCLS> ListarFinancieroCatalogoOrganismos()
         {
             FinancieroBL obj = new FinancieroBL();
             return obj.ListarFinancieroCatalogoOrganismos();
 
-        } 
+        }
         public List<FinancieroProgramaticaCLS> ListarProgramatico()
         {
             FinancieroBL obj = new FinancieroBL();
@@ -126,7 +126,7 @@ namespace
 
         public List<FinancieroFuenteEspecificaCLS> ListarFuentesEsp()
         {
-            FinancieroBL obj = new FinancieroBL();    
+            FinancieroBL obj = new FinancieroBL();
             return obj.ListarFuentesEsp();
 
         }
@@ -252,4 +252,3 @@ namespace
         }
     }
 }
-       
